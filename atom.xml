@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2021-07-23T07:54:18.490Z</updated>
+  <updated>2021-07-23T15:30:55.063Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -17,18 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VIP_Canceler V1.4</title>
-    <link href="https://longyu.cf/xposed-module/d18c25d20092.html"/>
-    <id>https://longyu.cf/xposed-module/d18c25d20092.html</id>
+    <title>VIP_Canceler V1.4.1</title>
+    <link href="https://longyu.cf/xposed-module/5fd47be6ecf6.html"/>
+    <id>https://longyu.cf/xposed-module/5fd47be6ecf6.html</id>
     <published>2021-07-23T09:36:16.000Z</published>
-    <updated>2021-07-23T07:54:18.490Z</updated>
+    <updated>2021-07-23T15:30:55.063Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;VIP-Canceler-V1-4&quot;&gt;&lt;a href=&quot;#VIP-Canceler-V1-4&quot; class=&quot;headerlink&quot; title=&quot;VIP_Canceler V1.4&quot;&gt;&lt;/a&gt;VIP_Canceler V1.4&lt;/h1&gt;&lt;h2 id=&quot;1-更新日志：&quot;&gt;&lt;a href=&quot;#1-更新日志：&quot; class=&quot;headerlink&quot; title=&quot;1. 更新日志：&quot;&gt;&lt;/a&gt;1. 更新日志：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;更新Fake Location[1.3.0.2]&lt;blockquote&gt;
+    <summary type="html">&lt;h1 id=&quot;VIP-Canceler-V1-4-1&quot;&gt;&lt;a href=&quot;#VIP-Canceler-V1-4-1&quot; class=&quot;headerlink&quot; title=&quot;VIP_Canceler V1.4.1&quot;&gt;&lt;/a&gt;VIP_Canceler V1.4.1&lt;/h1&gt;&lt;h2 id=&quot;1-更新日志：&quot;&gt;&lt;a href=&quot;#1-更新日志：&quot; class=&quot;headerlink&quot; title=&quot;1. 更新日志：&quot;&gt;&lt;/a&gt;1. 更新日志：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;更新Fake Location[1.3.0.2]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
 &lt;p&gt;1.3之前的版本将不在适配&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;减小了内存占用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;2-支持软件：&quot;&gt;&lt;a href=&quot;#2-支持软件：&quot; class=&quot;headerlink&quot; title=&quot;2. 支持软件：&quot;&gt;&lt;/a&gt;2. 支持软件：&lt;/h2&gt;</summary>
     
