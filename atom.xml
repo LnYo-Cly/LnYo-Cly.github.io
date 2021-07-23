@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2021-07-23T05:38:25.302Z</updated>
+  <updated>2021-07-23T07:46:07.828Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VIP_Canceler V1.4</title>
+    <link href="https://longyu.cf/xposed-module/d18c25d20092.html"/>
+    <id>https://longyu.cf/xposed-module/d18c25d20092.html</id>
+    <published>2021-07-23T09:36:16.000Z</published>
+    <updated>2021-07-23T07:46:07.828Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;VIP-Canceler-V1-4&quot;&gt;&lt;a href=&quot;#VIP-Canceler-V1-4&quot; class=&quot;headerlink&quot; title=&quot;VIP_Canceler V1.4&quot;&gt;&lt;/a&gt;VIP_Canceler V1.4&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Xposed模块" scheme="https://longyu.cf/categories/xposed-module/"/>
+    
+    
+    <category term="Xposed模块" scheme="https://longyu.cf/tags/Xposed%E6%A8%A1%E5%9D%97/"/>
+    
+    <category term="实用工具" scheme="https://longyu.cf/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>VScode+PicGo搭建图床</title>
@@ -44,19 +71,6 @@
     <category term="图床" scheme="https://longyu.cf/tags/%E5%9B%BE%E5%BA%8A/"/>
     
     <category term="jsDelivr" scheme="https://longyu.cf/tags/jsDelivr/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VIP_Canceler V1.4</title>
-    <link href="https://longyu.cf/uncategorized/d75bc2e8c381.html"/>
-    <id>https://longyu.cf/uncategorized/d75bc2e8c381.html</id>
-    <published>2021-07-22T09:36:16.000Z</published>
-    <updated>2021-07-22T09:36:16.616Z</updated>
-    
-    
-    
-    
     
   </entry>
   
