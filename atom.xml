@@ -48,16 +48,17 @@
     <link href="https://longyu.cf/vscode-enhance/b0939763cb08.html"/>
     <id>https://longyu.cf/vscode-enhance/b0939763cb08.html</id>
     <published>2021-07-22T12:46:05.000Z</published>
-    <updated>2021-07-23T05:38:25.302Z</updated>
+    <updated>2021-07-23T07:51:01.463Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1-下载PicGo插件&quot;&gt;&lt;a href=&quot;#1-下载PicGo插件&quot; class=&quot;headerlink&quot; title=&quot;1. 下载PicGo插件&quot;&gt;&lt;/a&gt;1. 下载PicGo插件&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;1-下载PicGo插件&quot;&gt;&lt;a href=&quot;#1-下载PicGo插件&quot; class=&quot;headerlink&quot; title=&quot;1. 下载PicGo插件&quot;&gt;&lt;/a&gt;1. 下载PicGo插件&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&quot;https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210722205519.png&quot; alt=&quot;20210722205519&quot;&gt;&lt;/p&gt;
+&lt;p&gt;先在扩展商店中下载PicGo插件（别告诉我你连VS code都没有）&lt;/p&gt;
+&lt;h1 id=&quot;2-选择搭建图床的网站&quot;&gt;&lt;a href=&quot;#2-选择搭建图床的网站&quot; class=&quot;headerlink&quot; title=&quot;2. 选择搭建图床的网站&quot;&gt;&lt;/a&gt;2. 选择搭建图床的网站&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;目前picgo只支持weibo, qiniu, tcyun, upyun, github, aliyun, imgur 和 smms这几种，不支持gitee&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;这里我选择用GitHub做演示&quot;&gt;&lt;a href=&quot;#这里我选择用GitHub做演示&quot; class=&quot;headerlink&quot; title=&quot;这里我选择用GitHub做演示&quot;&gt;&lt;/a&gt;这里我选择用GitHub做演示&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如果你用其他的网站，方法也都是差不多的&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
