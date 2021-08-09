@@ -21,29 +21,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"longyu.cf","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="VIP_Canceler V1.4.11. 更新日志： 更新Fake Location[1.3.0.2]   1.3之前的版本将不在适配   减小了内存占用  2. 支持软件：">
+<meta name="description" content="快速排序 方法思想：分治法 将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）   左边的数组全部小于等于x 右边的数组全部大于等于x x只是一个参考值，随意  模板12345678910111213141516171819void quick_sort(int q[], int l, int r)&amp;#123;    &#x2F;&#x2F;递归的终止情况    if(l &amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VIP_Canceler V1.4.1">
-<meta property="og:url" content="https://longyu.cf/xposed-module/5fd47be6ecf6.html">
+<meta property="og:title" content="快速排序算法">
+<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
-<meta property="og:description" content="VIP_Canceler V1.4.11. 更新日志： 更新Fake Location[1.3.0.2]   1.3之前的版本将不在适配   减小了内存占用  2. 支持软件：">
+<meta property="og:description" content="快速排序 方法思想：分治法 将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）   左边的数组全部小于等于x 右边的数组全部大于等于x x只是一个参考值，随意  模板12345678910111213141516171819void quick_sort(int q[], int l, int r)&amp;#123;    &#x2F;&#x2F;递归的终止情况    if(l &amp;gt">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-23T09:36:16.000Z">
-<meta property="article:modified_time" content="2021-07-23T15:30:55.063Z">
+<meta property="article:published_time" content="2021-08-03T12:46:05.000Z">
+<meta property="article:modified_time" content="2021-08-09T12:33:34.224Z">
 <meta property="article:author" content="璀璨cly">
-<meta property="article:tag" content="Xposed模块">
-<meta property="article:tag" content="实用工具">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="快速排序">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://longyu.cf/xposed-module/5fd47be6ecf6.html">
+<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/xposed-module/5fd47be6ecf6.html","path":"xposed-module/5fd47be6ecf6.html","title":"VIP_Canceler V1.4.1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html","path":"algorithm-and-data-structure/a524fbdfc0f7.html","title":"快速排序算法"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>VIP_Canceler V1.4.1 | 没有秘密的秘密小屋</title>
+<title>快速排序算法 | 没有秘密的秘密小屋</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -154,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VIP-Canceler-V1-4-1"><span class="nav-text">VIP_Canceler V1.4.1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%EF%BC%9A"><span class="nav-text">1. 更新日志：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%94%AF%E6%8C%81%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="nav-text">2. 支持软件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">3. 使用方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%EF%BC%9A"><span class="nav-text">4. 软件下载：</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-text">模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -242,7 +243,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/xposed-module/5fd47be6ecf6.html">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
@@ -255,7 +256,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          VIP_Canceler V1.4.1
+          快速排序算法
         </h1>
 
         <div class="post-meta-container">
@@ -268,17 +269,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-07-23 17:36:16 / 修改时间：23:30:55" itemprop="dateCreated datePublished" datetime="2021-07-23T17:36:16+08:00">2021-07-23</time>
+      <time title="创建时间：2021-08-03 20:46:05" itemprop="dateCreated datePublished" datetime="2021-08-03T20:46:05+08:00">2021-08-03</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-09 20:33:34" itemprop="dateModified" datetime="2021-08-09T20:33:34+08:00">2021-08-09</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/xposed-module/" itemprop="url" rel="index"><span itemprop="name">Xposed模块</span></a>
+          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
         </span>
     </span>
 
@@ -297,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>294</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -315,50 +322,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="VIP-Canceler-V1-4-1"><a href="#VIP-Canceler-V1-4-1" class="headerlink" title="VIP_Canceler V1.4.1"></a>VIP_Canceler V1.4.1</h1><h2 id="1-更新日志："><a href="#1-更新日志：" class="headerlink" title="1. 更新日志："></a>1. 更新日志：</h2><ul>
-<li>更新Fake Location[1.3.0.2]</li>
-</ul>
-<blockquote>
-<p>1.3之前的版本将不在适配</p>
+        <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><blockquote>
+<p>方法思想：分治法</p>
+<p>将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）</p>
 </blockquote>
 <ul>
-<li>减小了内存占用</li>
+<li>左边的数组全部小于等于x</li>
+<li>右边的数组全部大于等于x</li>
+<li>x只是一个参考值，随意</li>
 </ul>
-<h2 id="2-支持软件："><a href="#2-支持软件：" class="headerlink" title="2. 支持软件："></a>2. 支持软件：</h2><span id="more"></span>
-<ul>
-<li>鲨鱼记账[3.45.3]</li>
-<li>看漫画[3.6.0]</li>
-<li>知音漫客[6.0.5]</li>
-<li>搜图神器[4.4.6]</li>
-<li>滴答清单[5.8.1]</li>
-<li>迅游手游加速器[5.2.9.4]</li>
-<li>Fake Location[1.3.0.2]<blockquote>
-<p>依旧不能使用基站模拟功能</p>
-</blockquote>
-</li>
-<li>佛跳墙[2.6.5]</li>
-<li>now冥想[4.1.2]<blockquote>
-<p>如果遇到不能听的音频可以退出重进再试试</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>以上是测试通过的软件</p>
-</blockquote>
-<h2 id="3-使用方法："><a href="#3-使用方法：" class="headerlink" title="3. 使用方法："></a>3. 使用方法：</h2><ul>
-<li>手机已有xposed框架</li>
-<li>选择作用的软件/开启全局</li>
-</ul>
-<h2 id="4-软件下载："><a href="#4-软件下载：" class="headerlink" title="4. 软件下载："></a>4. 软件下载：</h2><p>下载地址：</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://wwx.lanzoui.com/iWImJrs4ysb">蓝奏云高速通道</a></p>
-<blockquote>
-<p>蓝奏云密码:et5m</p>
-</blockquote>
-</li>
-<li><p><a href="/download/VIP_Canceler_v1.4.1.apk">备用下载</a></p>
-</li>
-</ul>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="keyword">int</span> q[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//递归的终止情况</span></span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">//第一步：分成子问题</span></span><br><span class="line">    <span class="keyword">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">do</span> i++; <span class="keyword">while</span>(q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j--; <span class="keyword">while</span>(q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//第二步：递归处理子问题</span></span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">    <span class="comment">//l---j -x- i---r</span></span><br><span class="line">    <span class="comment">//第三步：子问题合并.快排这一步不需要操作，但归并排序的核心在这一步骤</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof">最小K个数</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">getLeastNumbers</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">quick_sorr</span>(arr,<span class="number">0</span>,arr.<span class="built_in">size</span>()<span class="number">-1</span>);</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; temp;</span><br><span class="line">        temp.<span class="built_in">assign</span>(arr.<span class="built_in">begin</span>(),arr.<span class="built_in">begin</span>()+k);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sorr</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; arr,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;=r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> i=l<span class="number">-1</span>,j=r+<span class="number">1</span>,x=arr[(l + r) &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">        <span class="keyword">do</span> i++;<span class="keyword">while</span>(arr[i]&lt;x);</span><br><span class="line">        <span class="keyword">do</span> j--;<span class="keyword">while</span>(x&lt;arr[j]);</span><br><span class="line">        <span class="keyword">if</span>(i&lt;j) <span class="built_in">swap</span>(arr[i],arr[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sorr</span>(arr,l,j),<span class="built_in">quick_sorr</span>(arr,j+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/k-closest-points-to-origin">最接近原点的K个点</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">kClosest</span>(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; points, <span class="keyword">int</span> k) &#123;</span><br><span class="line"><span class="built_in">quick_sorr</span>(points,<span class="number">0</span>,points.<span class="built_in">size</span>()<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;points.<span class="built_in">begin</span>(),points.<span class="built_in">begin</span>()+k&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sorr</span><span class="params">(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; a, <span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = l - <span class="number">1</span>,j = r + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">0</span>]*a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">0</span>]+a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">1</span>]*a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j)&#123;</span><br><span class="line">            <span class="keyword">do</span> i++; <span class="keyword">while</span>(a[i][<span class="number">0</span>] * a[i][<span class="number">0</span>] + a[i][<span class="number">1</span>] * a[i][<span class="number">1</span>] &lt; sum);</span><br><span class="line">            <span class="keyword">do</span> j--; <span class="keyword">while</span>(a[j][<span class="number">0</span>] * a[j][<span class="number">0</span>] + a[j][<span class="number">1</span>] * a[j][<span class="number">1</span>] &gt; sum);</span><br><span class="line">            <span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(a[i],a[j]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">quick_sorr</span>(a,l,j);</span><br><span class="line"> <span class="built_in">quick_sorr</span>(a,j+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -394,7 +371,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://longyu.cf/xposed-module/5fd47be6ecf6.html" title="VIP_Canceler V1.4.1">https://longyu.cf/xposed-module/5fd47be6ecf6.html</a>
+      <a href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html" title="快速排序算法">https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -440,21 +417,22 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Xposed%E6%A8%A1%E5%9D%97/" rel="tag"><i class="fa fa-tag"></i> Xposed模块</a>
-              <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 实用工具</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+              <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="tag"><i class="fa fa-tag"></i> 快速排序</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/vscode-enhance/b0939763cb08.html" rel="prev" title="VScode+PicGo搭建图床">
-                  <i class="fa fa-chevron-left"></i> VScode+PicGo搭建图床
+                <a href="/xposed-module/5fd47be6ecf6.html" rel="prev" title="VIP_Canceler V1.4.1">
+                  <i class="fa fa-chevron-left"></i> VIP_Canceler V1.4.1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/a524fbdfc0f7.html" rel="next" title="快速排序算法">
-                  快速排序算法 <i class="fa fa-chevron-right"></i>
+                <a href="/algorithm-and-data-structure/3b0f82f90f81.html" rel="next" title="单调队列的实现">
+                  单调队列的实现 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -548,7 +526,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"fd7a67618780d03caad8da2fe2cf912c"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"9e9aea0ea3646966d97649fcb68f9a3b"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
