@@ -24,7 +24,7 @@
 <meta name="description" content="并查集 将两个集合合并–》例如连通分支合并一个 询问两个元素是否在一个集合当中 近乎O（1）  简单理解（转载）为了解释并查集的原理，我将举一个更有爱的例子。 话说江湖上散落着各式各样的大侠，有上千个之多。他们没有什么正当职业，整天背着剑在外面走来走去，碰到和自己不是一路人的，就免不了要打一架。但大侠们有一个优点就是讲义气，绝对不打自己的朋友。而且他们信奉“朋友的朋友就是我的朋友”，只要是能通过朋">
 <meta property="og:type" content="article">
 <meta property="og:title" content="并查集的理解与实现">
-<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html">
+<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
 <meta property="og:description" content="并查集 将两个集合合并–》例如连通分支合并一个 询问两个元素是否在一个集合当中 近乎O（1）  简单理解（转载）为了解释并查集的原理，我将举一个更有爱的例子。 话说江湖上散落着各式各样的大侠，有上千个之多。他们没有什么正当职业，整天背着剑在外面走来走去，碰到和自己不是一路人的，就免不了要打一架。但大侠们有一个优点就是讲义气，绝对不打自己的朋友。而且他们信奉“朋友的朋友就是我的朋友”，只要是能通过朋">
 <meta property="og:locale" content="zh_CN">
@@ -40,11 +40,11 @@
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210803124721.png">
 
 
-<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html">
+<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html","path":"algorithm-and-data-structure/d5ae1c88dad1.html","title":"并查集的理解与实现"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html","path":"algorithm-and-data-structure/并查集.html","title":"并查集的理解与实现"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>并查集的理解与实现 | 没有秘密的秘密小屋</title>
@@ -98,9 +98,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">17</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">22</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -175,7 +175,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -188,7 +188,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -246,7 +246,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
@@ -369,7 +369,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html" title="并查集的理解与实现">https://longyu.cf/algorithm-and-data-structure/d5ae1c88dad1.html</a>
+      <a href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html" title="并查集的理解与实现">https://longyu.cf/algorithm-and-data-structure/并查集.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -424,13 +424,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/3b0f82f90f81.html" rel="prev" title="单调队列的实现">
-                  <i class="fa fa-chevron-left"></i> 单调队列的实现
+                <a href="/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html" rel="prev" title="快速排序算法">
+                  <i class="fa fa-chevron-left"></i> 快速排序算法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/9bd0bb63acee.html" rel="next" title="优先队列（堆）的实现">
-                  优先队列（堆）的实现 <i class="fa fa-chevron-right"></i>
+                <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html" rel="next" title="单调栈的实现">
+                  单调栈的实现 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -465,14 +465,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -524,7 +524,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"15aa010bba273c726c10ab4ac328d436"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"e9638055e66d987c5ed005d0b502dd99"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

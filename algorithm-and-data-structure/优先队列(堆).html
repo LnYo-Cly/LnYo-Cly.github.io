@@ -21,30 +21,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"longyu.cf","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="快速排序 方法思想：分治法 将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）   左边的数组全部小于等于x 右边的数组全部大于等于x x只是一个参考值，随意  模板12345678910111213141516171819void quick_sort(int q[], int l, int r)&amp;#123;    &#x2F;&#x2F;递归的终止情况    if(l &amp;gt">
+<meta name="description" content="优先队列（堆）优先队列也就是堆 什么是堆呢？ 堆是一颗完全二叉树，树中每个结点的值都不小于（或不大于）其左右孩子的值。 如果父亲结点是大于等于左右孩子就是大顶堆，小于等于左右孩子就是小顶堆。 priority_queue&lt;int , vector&lt;int&gt;,greater&lt;int&gt;&gt; heap;&#x2F;&#x2F;创建小根堆  1234567891011引用头文件 #inclu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序算法">
-<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
+<meta property="og:title" content="优先队列（堆）的实现">
+<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
-<meta property="og:description" content="快速排序 方法思想：分治法 将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）   左边的数组全部小于等于x 右边的数组全部大于等于x x只是一个参考值，随意  模板12345678910111213141516171819void quick_sort(int q[], int l, int r)&amp;#123;    &#x2F;&#x2F;递归的终止情况    if(l &amp;gt">
+<meta property="og:description" content="优先队列（堆）优先队列也就是堆 什么是堆呢？ 堆是一颗完全二叉树，树中每个结点的值都不小于（或不大于）其左右孩子的值。 如果父亲结点是大于等于左右孩子就是大顶堆，小于等于左右孩子就是小顶堆。 priority_queue&lt;int , vector&lt;int&gt;,greater&lt;int&gt;&gt; heap;&#x2F;&#x2F;创建小根堆  1234567891011引用头文件 #inclu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-03T12:46:05.000Z">
-<meta property="article:modified_time" content="2021-08-09T12:33:34.224Z">
+<meta property="article:modified_time" content="2021-08-09T13:12:59.905Z">
 <meta property="article:author" content="璀璨cly">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="快速排序">
+<meta property="article:tag" content="优先队列">
+<meta property="article:tag" content="堆">
+<meta property="article:tag" content="map">
+<meta property="article:tag" content="priority_queue">
+<meta property="article:tag" content="pair">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
+<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html","path":"algorithm-and-data-structure/a524fbdfc0f7.html","title":"快速排序算法"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html","path":"algorithm-and-data-structure/优先队列(堆).html","title":"优先队列（堆）的实现"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>快速排序算法 | 没有秘密的秘密小屋</title>
+<title>优先队列（堆）的实现 | 没有秘密的秘密小屋</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -95,9 +99,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">17</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">22</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -155,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-text">模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-text">题目</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%EF%BC%88%E5%A0%86%EF%BC%89"><span class="nav-text">优先队列（堆）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98%E7%9B%AE"><span class="nav-text">练习题目</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,7 +176,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -185,7 +189,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -243,7 +247,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
@@ -256,7 +260,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          快速排序算法
+          优先队列（堆）的实现
         </h1>
 
         <div class="post-meta-container">
@@ -277,7 +281,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-09 20:33:34" itemprop="dateModified" datetime="2021-08-09T20:33:34+08:00">2021-08-09</time>
+        <time title="修改时间：2021-08-09 21:12:59" itemprop="dateModified" datetime="2021-08-09T21:12:59+08:00">2021-08-09</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +308,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -322,21 +326,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><blockquote>
-<p>方法思想：分治法</p>
-<p>将Array[l—r]分为Array[l-x]和Arrar[x-r]（l和r为左右边界）</p>
-</blockquote>
-<ul>
-<li>左边的数组全部小于等于x</li>
-<li>右边的数组全部大于等于x</li>
-<li>x只是一个参考值，随意</li>
-</ul>
-<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="keyword">int</span> q[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//递归的终止情况</span></span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">//第一步：分成子问题</span></span><br><span class="line">    <span class="keyword">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">do</span> i++; <span class="keyword">while</span>(q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j--; <span class="keyword">while</span>(q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//第二步：递归处理子问题</span></span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">    <span class="comment">//l---j -x- i---r</span></span><br><span class="line">    <span class="comment">//第三步：子问题合并.快排这一步不需要操作，但归并排序的核心在这一步骤</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof">最小K个数</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">getLeastNumbers</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">quick_sorr</span>(arr,<span class="number">0</span>,arr.<span class="built_in">size</span>()<span class="number">-1</span>);</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; temp;</span><br><span class="line">        temp.<span class="built_in">assign</span>(arr.<span class="built_in">begin</span>(),arr.<span class="built_in">begin</span>()+k);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sorr</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; arr,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l&gt;=r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> i=l<span class="number">-1</span>,j=r+<span class="number">1</span>,x=arr[(l + r) &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">        <span class="keyword">do</span> i++;<span class="keyword">while</span>(arr[i]&lt;x);</span><br><span class="line">        <span class="keyword">do</span> j--;<span class="keyword">while</span>(x&lt;arr[j]);</span><br><span class="line">        <span class="keyword">if</span>(i&lt;j) <span class="built_in">swap</span>(arr[i],arr[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sorr</span>(arr,l,j),<span class="built_in">quick_sorr</span>(arr,j+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/k-closest-points-to-origin">最接近原点的K个点</a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">kClosest</span>(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; points, <span class="keyword">int</span> k) &#123;</span><br><span class="line"><span class="built_in">quick_sorr</span>(points,<span class="number">0</span>,points.<span class="built_in">size</span>()<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;points.<span class="built_in">begin</span>(),points.<span class="built_in">begin</span>()+k&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sorr</span><span class="params">(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; a, <span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = l - <span class="number">1</span>,j = r + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">0</span>]*a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">0</span>]+a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">1</span>]*a[(l + r) &gt;&gt; <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j)&#123;</span><br><span class="line">            <span class="keyword">do</span> i++; <span class="keyword">while</span>(a[i][<span class="number">0</span>] * a[i][<span class="number">0</span>] + a[i][<span class="number">1</span>] * a[i][<span class="number">1</span>] &lt; sum);</span><br><span class="line">            <span class="keyword">do</span> j--; <span class="keyword">while</span>(a[j][<span class="number">0</span>] * a[j][<span class="number">0</span>] + a[j][<span class="number">1</span>] * a[j][<span class="number">1</span>] &gt; sum);</span><br><span class="line">            <span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(a[i],a[j]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">quick_sorr</span>(a,l,j);</span><br><span class="line"> <span class="built_in">quick_sorr</span>(a,j+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="优先队列（堆）"><a href="#优先队列（堆）" class="headerlink" title="优先队列（堆）"></a>优先队列（堆）</h1><p>优先队列也就是堆</p>
+<p>什么是堆呢？</p>
+<p>堆是一颗完全二叉树，树中每个结点的值都不小于（或不大于）其左右孩子的值。 如果父亲结点是大于等于左右孩子就是大顶堆，小于等于左右孩子就是小顶堆。</p>
+<pre><code>priority_queue&lt;int , vector&lt;int&gt;,greater&lt;int&gt;&gt; heap;//创建小根堆
+</code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">引用头文件 <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line">top 访问队头元素</span><br><span class="line">empty 队列是否为空</span><br><span class="line">size 返回队列内元素个数</span><br><span class="line">push 插入元素到队尾 (并排序)</span><br><span class="line">emplace 原地构造一个元素并插入队列</span><br><span class="line">pop 弹出队头元素</span><br><span class="line">swap 交换内容</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">std::priority_queue&lt;T&gt; pq;</span><br><span class="line">std::priority_queue&lt;T, std::vector&lt;T&gt;, cmp&gt; pq;</span><br><span class="line"></span><br><span class="line"><span class="comment">//自定义比较类型</span></span><br><span class="line"><span class="comment">//左大于右就会建立小顶堆，反而建立大顶堆</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 小顶堆--pair类型的比较</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">mycomparison</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&amp; lhs, <span class="keyword">const</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&amp; rhs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> lhs.second &gt; rhs.second;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+
+<h2 id="练习题目"><a href="#练习题目" class="headerlink" title="练习题目"></a>练习题目</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/top-k-frequent-elements">Leetcode-前K个高频元素</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 小顶堆</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">mycmp</span>&#123;</span></span><br><span class="line">        <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">const</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &amp;l,<span class="keyword">const</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &amp;r)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> l.second&gt;r.second;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">     <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">topKFrequent</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; map;</span><br><span class="line">        priority_queue&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;,vector&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;&gt;,mycmp&gt; heap;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();++i)</span><br><span class="line">        &#123;</span><br><span class="line">            ++map[nums[i]];</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i : map)&#123;</span><br><span class="line">            heap.<span class="built_in">push</span>(i);</span><br><span class="line">            <span class="keyword">if</span>(heap.<span class="built_in">size</span>()&gt;k)</span><br><span class="line">            &#123;</span><br><span class="line">                heap.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(!heap.<span class="built_in">empty</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(heap.<span class="built_in">top</span>().first);</span><br><span class="line">            heap.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -371,7 +371,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html" title="快速排序算法">https://longyu.cf/algorithm-and-data-structure/a524fbdfc0f7.html</a>
+      <a href="https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html" title="优先队列（堆）的实现">https://longyu.cf/algorithm-and-data-structure/优先队列(堆).html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -419,21 +419,22 @@
           <div class="post-tags">
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
               <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-              <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="tag"><i class="fa fa-tag"></i> 快速排序</a>
+              <a href="/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" rel="tag"><i class="fa fa-tag"></i> 优先队列</a>
+              <a href="/tags/%E5%A0%86/" rel="tag"><i class="fa fa-tag"></i> 堆</a>
+              <a href="/tags/map/" rel="tag"><i class="fa fa-tag"></i> map</a>
+              <a href="/tags/priority-queue/" rel="tag"><i class="fa fa-tag"></i> priority_queue</a>
+              <a href="/tags/pair/" rel="tag"><i class="fa fa-tag"></i> pair</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/xposed-module/5fd47be6ecf6.html" rel="prev" title="VIP_Canceler V1.4.1">
-                  <i class="fa fa-chevron-left"></i> VIP_Canceler V1.4.1
+                <a href="/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html" rel="prev" title="位运算详解">
+                  <i class="fa fa-chevron-left"></i> 位运算详解
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/3b0f82f90f81.html" rel="next" title="单调队列的实现">
-                  单调队列的实现 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -467,14 +468,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -526,7 +527,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"9e9aea0ea3646966d97649fcb68f9a3b"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"5f1319713d536eb756ccb2f8002a8196"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
