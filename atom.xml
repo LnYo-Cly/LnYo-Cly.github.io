@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2022-01-08T12:06:48.631Z</updated>
+  <updated>2022-01-09T13:08:41.730Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -17,18 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>归并排序算法</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html</id>
-    <published>2022-01-08T12:46:05.000Z</published>
-    <updated>2022-01-08T12:06:48.631Z</updated>
+    <title>差分与前缀和</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html</id>
+    <published>2022-01-09T12:46:06.000Z</published>
+    <updated>2022-01-09T13:08:41.730Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;前缀和&quot;&gt;&lt;a href=&quot;#前缀和&quot; class=&quot;headerlink&quot; title=&quot;前缀和&quot;&gt;&lt;/a&gt;前缀和&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;作用：求某一段的和 （ [l,r]</summary>
         
       
     
@@ -41,9 +42,42 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="归并排序" scheme="https://longyu.cf/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
+    <category term="差分" scheme="https://longyu.cf/tags/%E5%B7%AE%E5%88%86/"/>
+    
+    <category term="前缀和" scheme="https://longyu.cf/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高精度算法</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html</id>
+    <published>2022-01-09T12:46:05.000Z</published>
+    <updated>2022-01-09T10:47:06.614Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;高精度加法&quot;&gt;&lt;a href=&quot;#高精度加法&quot; class=&quot;headerlink&quot; title=&quot;高精度加法&quot;&gt;&lt;/a&gt;高精度加法&lt;/h1&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="高精度加法" scheme="https://longyu.cf/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E6%B3%95/"/>
+    
+    <category term="高精度减法" scheme="https://longyu.cf/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%87%8F%E6%B3%95/"/>
     
   </entry>
   
@@ -72,9 +106,40 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
+    <category term="快速排序" scheme="https://longyu.cf/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+    
     <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
-    <category term="快速排序" scheme="https://longyu.cf/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+  </entry>
+  
+  <entry>
+    <title>归并排序算法</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html</id>
+    <published>2022-01-08T12:46:05.000Z</published>
+    <updated>2022-01-08T12:06:48.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="归并排序" scheme="https://longyu.cf/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -108,35 +173,6 @@
     <category term="整数二分" scheme="https://longyu.cf/tags/%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86/"/>
     
     <category term="小数二分" scheme="https://longyu.cf/tags/%E5%B0%8F%E6%95%B0%E4%BA%8C%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算详解</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-11T12:31:56.331Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;位运算&quot;&gt;&lt;a href=&quot;#位运算&quot; class=&quot;headerlink&quot; title=&quot;位运算&quot;&gt;&lt;/a&gt;位运算&lt;/h1&gt;&lt;h2 id=&quot;乘以2的m次方&quot;&gt;&lt;a href=&quot;#乘以2的m次方&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="位运算" scheme="https://longyu.cf/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
@@ -178,19 +214,18 @@
   </entry>
   
   <entry>
-    <title>差分与前缀和</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html</id>
+    <title>单调队列的实现</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html</id>
     <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-11T07:10:11.225Z</updated>
+    <updated>2021-08-09T13:44:10.277Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前缀和&quot;&gt;&lt;a href=&quot;#前缀和&quot; class=&quot;headerlink&quot; title=&quot;前缀和&quot;&gt;&lt;/a&gt;前缀和&lt;/h1&gt;&lt;p&gt;前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理：&lt;/p&gt;
-&lt;figure</summary>
+    <summary type="html">&lt;h1 id=&quot;单调队列&quot;&gt;&lt;a href=&quot;#单调队列&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -203,9 +238,38 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="差分" scheme="https://longyu.cf/tags/%E5%B7%AE%E5%88%86/"/>
+    <category term="单调队列" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
     
-    <category term="前缀和" scheme="https://longyu.cf/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    <category term="滑动窗口" scheme="https://longyu.cf/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>位运算详解</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html</id>
+    <published>2021-08-03T12:46:05.000Z</published>
+    <updated>2021-08-11T12:31:56.331Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;位运算&quot;&gt;&lt;a href=&quot;#位运算&quot; class=&quot;headerlink&quot; title=&quot;位运算&quot;&gt;&lt;/a&gt;位运算&lt;/h1&gt;&lt;h2 id=&quot;乘以2的m次方&quot;&gt;&lt;a href=&quot;#乘以2的m次方&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="位运算" scheme="https://longyu.cf/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
@@ -239,18 +303,18 @@
   </entry>
   
   <entry>
-    <title>单调队列的实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html</id>
+    <title>并查集的理解与实现</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html</id>
     <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-09T13:44:10.277Z</updated>
+    <updated>2021-08-03T06:56:45.299Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;单调队列&quot;&gt;&lt;a href=&quot;#单调队列&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;并查集&quot;&gt;&lt;a href=&quot;#并查集&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -263,9 +327,7 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="单调队列" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
-    
-    <category term="滑动窗口" scheme="https://longyu.cf/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    <category term="并查集" scheme="https://longyu.cf/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   
@@ -295,35 +357,6 @@
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="双指针" scheme="https://longyu.cf/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>并查集的理解与实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-03T06:56:45.299Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;并查集&quot;&gt;&lt;a href=&quot;#并查集&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="并查集" scheme="https://longyu.cf/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
   </entry>
   

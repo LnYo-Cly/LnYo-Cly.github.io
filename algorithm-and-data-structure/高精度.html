@@ -21,30 +21,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"longyu.cf","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="位运算乘以2的m次方1x &lt;&lt; m  除以2的m次方1x &gt;&gt; m 判断一个数的奇偶性1(n &amp; 1) &#x3D;&#x3D; 1&#x2F;&#x2F;true为奇数，false为偶数 不用临时变量交换两个数12345a ^&#x3D; b ^&#x3D; a ^&#x3D; b;     &#x2F;&#x2F;或者，一样a ^&#x3D; b;  b ^&#x3D; a;  a ^&#x3D; b;  取绝对值1(n ^ (n &gt;&gt; 31)) - (n &gt;&amp;">
+<meta name="description" content="高精度加法1234567891011121314151617&#x2F;&#x2F; C &#x3D; A + B, A &gt;&#x3D; 0, B &gt;&#x3D; 0vector&lt;int&gt; add(vector&lt;int&gt; &amp;A, vector&lt;int&gt; &amp;B)&amp;#123;    vector&lt;int&gt; C;    int t &#x3D; 0;&#x2F;&#x2F;进位    for (int i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="位运算详解">
-<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html">
+<meta property="og:title" content="高精度算法">
+<meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
-<meta property="og:description" content="位运算乘以2的m次方1x &lt;&lt; m  除以2的m次方1x &gt;&gt; m 判断一个数的奇偶性1(n &amp; 1) &#x3D;&#x3D; 1&#x2F;&#x2F;true为奇数，false为偶数 不用临时变量交换两个数12345a ^&#x3D; b ^&#x3D; a ^&#x3D; b;     &#x2F;&#x2F;或者，一样a ^&#x3D; b;  b ^&#x3D; a;  a ^&#x3D; b;  取绝对值1(n ^ (n &gt;&gt; 31)) - (n &gt;&amp;">
+<meta property="og:description" content="高精度加法1234567891011121314151617&#x2F;&#x2F; C &#x3D; A + B, A &gt;&#x3D; 0, B &gt;&#x3D; 0vector&lt;int&gt; add(vector&lt;int&gt; &amp;A, vector&lt;int&gt; &amp;B)&amp;#123;    vector&lt;int&gt; C;    int t &#x3D; 0;&#x2F;&#x2F;进位    for (int i">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-03T12:46:05.000Z">
-<meta property="article:modified_time" content="2021-08-11T12:31:56.331Z">
+<meta property="article:published_time" content="2022-01-09T12:46:05.000Z">
+<meta property="article:modified_time" content="2022-01-09T10:47:06.614Z">
 <meta property="article:author" content="璀璨cly">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="位运算">
+<meta property="article:tag" content="算法模板">
+<meta property="article:tag" content="高精度加法">
+<meta property="article:tag" content="高精度减法">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html">
+<link rel="canonical" href="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html","path":"algorithm-and-data-structure/位运算.html","title":"位运算详解"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html","path":"algorithm-and-data-structure/高精度.html","title":"高精度算法"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>位运算详解 | 没有秘密的秘密小屋</title>
+<title>高精度算法 | 没有秘密的秘密小屋</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -155,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-text">位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%98%E4%BB%A52%E7%9A%84m%E6%AC%A1%E6%96%B9"><span class="nav-text">乘以2的m次方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%A4%E4%BB%A52%E7%9A%84m%E6%AC%A1%E6%96%B9"><span class="nav-text">除以2的m次方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%95%B0%E7%9A%84%E5%A5%87%E5%81%B6%E6%80%A7"><span class="nav-text">判断一个数的奇偶性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%94%A8%E4%B8%B4%E6%97%B6%E5%8F%98%E9%87%8F%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E6%95%B0"><span class="nav-text">不用临时变量交换两个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E7%BB%9D%E5%AF%B9%E5%80%BC"><span class="nav-text">取绝对值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E4%BD%8E%E4%BD%8D%E5%88%B0%E9%AB%98%E4%BD%8D-%E5%8F%96n%E7%9A%84%E7%AC%ACm%E4%BD%8D"><span class="nav-text">从低位到高位,取n的第m位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E5%8E%BBx%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E7%9A%841"><span class="nav-text">消去x最后一个的1</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E6%B3%95"><span class="nav-text">高精度加法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%87%8F%E6%B3%95"><span class="nav-text">高精度减法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E4%B9%98%E6%B3%95"><span class="nav-text">高精度乘法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%99%A4%E6%B3%95"><span class="nav-text">高精度除法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -243,7 +245,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
@@ -256,7 +258,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          位运算详解
+          高精度算法
         </h1>
 
         <div class="post-meta-container">
@@ -269,16 +271,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-03 20:46:05" itemprop="dateCreated datePublished" datetime="2021-08-03T20:46:05+08:00">2021-08-03</time>
+      <time title="创建时间：2022-01-09 20:46:05 / 修改时间：18:47:06" itemprop="dateCreated datePublished" datetime="2022-01-09T20:46:05+08:00">2022-01-09</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-11 20:31:56" itemprop="dateModified" datetime="2021-08-11T20:31:56+08:00">2021-08-11</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -304,14 +300,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>423</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -322,21 +318,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="乘以2的m次方"><a href="#乘以2的m次方" class="headerlink" title="乘以2的m次方"></a>乘以2的m次方</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &lt;&lt; m</span><br></pre></td></tr></table></figure>
+        <h1 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法"></a>高精度加法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C = A + B, A &gt;= 0, B &gt;= 0</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">add</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; &amp;A, vector&lt;<span class="keyword">int</span>&gt; &amp;B)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; C;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;<span class="comment">//进位</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.<span class="built_in">size</span>()||i &lt; B.<span class="built_in">size</span>(); i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; A.<span class="built_in">size</span>()) t += A[i];</span><br><span class="line">        <span class="keyword">if</span> (i &lt; B.<span class="built_in">size</span>()) t += B[i];</span><br><span class="line">        C.<span class="built_in">push_back</span>(t % <span class="number">10</span>);</span><br><span class="line">        t /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (t) C.<span class="built_in">push_back</span>(t);</span><br><span class="line">    <span class="keyword">return</span> C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="高精度减法"><a href="#高精度减法" class="headerlink" title="高精度减法"></a>高精度减法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//比较A和B的大小</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; &amp;A, vector&lt;<span class="keyword">int</span>&gt; &amp;B)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(A.<span class="built_in">size</span>() != B.<span class="built_in">size</span>()) <span class="keyword">return</span> A.<span class="built_in">size</span>()&gt;B.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=A.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i]!=B[i])&#123;</span><br><span class="line">            <span class="keyword">return</span> A[i]&gt;B[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// C = A - B, 满足A &gt;= B, A &gt;= 0, B &gt;= 0</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">sub</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; &amp;A, vector&lt;<span class="keyword">int</span>&gt; &amp;B)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; C;</span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.<span class="built_in">size</span>(); i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        t = A[i] - t;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; B.<span class="built_in">size</span>()) t -= B[i];</span><br><span class="line">        C.<span class="built_in">push_back</span>((t + <span class="number">10</span>) % <span class="number">10</span>);</span><br><span class="line">        <span class="keyword">if</span> (t &lt; <span class="number">0</span>) t = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> t = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//去除前导零</span></span><br><span class="line">    <span class="keyword">while</span> (C.<span class="built_in">size</span>() &gt; <span class="number">1</span> &amp;&amp; C.<span class="built_in">back</span>() == <span class="number">0</span>) C.<span class="built_in">pop_back</span>();</span><br><span class="line">    <span class="keyword">return</span> C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//---读入数组</span></span><br><span class="line">    <span class="comment">//A和B都是正数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">cmp</span>(A,B))&#123;</span><br><span class="line">        <span class="keyword">auto</span> c = <span class="built_in">sub</span>(A,B);</span><br><span class="line">        <span class="comment">//---输出</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> c=<span class="built_in">sub</span>(B,A);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-&quot;</span>);<span class="comment">//结果是负数</span></span><br><span class="line">        <span class="comment">//---输出</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="高精度乘法"><a href="#高精度乘法" class="headerlink" title="高精度乘法"></a>高精度乘法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C = A * b, A &gt;= 0, b &gt;= 0</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">mul</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; &amp;A, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; C;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.<span class="built_in">size</span>(); i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; A.<span class="built_in">size</span>()) t += A[i] * b;</span><br><span class="line">        C.<span class="built_in">push_back</span>(t % <span class="number">10</span>);</span><br><span class="line">        t /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (t) C.<span class="built_in">push_back</span>(t);</span><br><span class="line">    <span class="keyword">return</span> C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="除以2的m次方"><a href="#除以2的m次方" class="headerlink" title="除以2的m次方"></a>除以2的m次方</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &gt;&gt; m</span><br></pre></td></tr></table></figure>
-<h2 id="判断一个数的奇偶性"><a href="#判断一个数的奇偶性" class="headerlink" title="判断一个数的奇偶性"></a>判断一个数的奇偶性</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(n &amp; <span class="number">1</span>) == <span class="number">1</span><span class="comment">//true为奇数，false为偶数</span></span><br></pre></td></tr></table></figure>
-<h2 id="不用临时变量交换两个数"><a href="#不用临时变量交换两个数" class="headerlink" title="不用临时变量交换两个数"></a>不用临时变量交换两个数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a ^= b ^= a ^= b;     </span><br><span class="line"><span class="comment">//或者，一样</span></span><br><span class="line">a ^= b;  </span><br><span class="line">b ^= a;  </span><br><span class="line">a ^= b;</span><br></pre></td></tr></table></figure>
-
-<h2 id="取绝对值"><a href="#取绝对值" class="headerlink" title="取绝对值"></a>取绝对值</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(n ^ (n &gt;&gt; <span class="number">31</span>)) - (n &gt;&gt; <span class="number">31</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="从低位到高位-取n的第m位"><a href="#从低位到高位-取n的第m位" class="headerlink" title="从低位到高位,取n的第m位"></a>从低位到高位,取n的第m位</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(n &gt;&gt; (m<span class="number">-1</span>)) &amp; <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-<h2 id="消去x最后一个的1"><a href="#消去x最后一个的1" class="headerlink" title="消去x最后一个的1"></a>消去x最后一个的1</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x&amp;(x<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
-<p>十进制数10的二进制为1010,9的二进制数为1001,那么(1010)&amp;(1001)=1000，现在10的二进制中最后一位的1已经被消去</p>
-<p>可以计算一个数的二进制中1的个数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bitcount</span> <span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">0</span> ;</span><br><span class="line">    <span class="keyword">while</span> (n) &#123;</span><br><span class="line">        count++ ;</span><br><span class="line">        n &amp;= (n - <span class="number">1</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="高精度除法"><a href="#高精度除法" class="headerlink" title="高精度除法"></a>高精度除法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//r是余数</span></span><br><span class="line"><span class="comment">// A / b = C ... r, A &gt;= 0, b &gt; 0</span></span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">div</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt; &amp;A, <span class="keyword">int</span> b, <span class="keyword">int</span> &amp;r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; C;</span><br><span class="line">    r = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//从最高位开始算</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = A.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i -- )</span><br><span class="line">    &#123;</span><br><span class="line">        r = r * <span class="number">10</span> + A[i];</span><br><span class="line">        C.<span class="built_in">push_back</span>(r / b);</span><br><span class="line">        r %= b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">reverse</span>(C.<span class="built_in">begin</span>(), C.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">while</span> (C.<span class="built_in">size</span>() &gt; <span class="number">1</span> &amp;&amp; C.<span class="built_in">back</span>() == <span class="number">0</span>) C.<span class="built_in">pop_back</span>();</span><br><span class="line">    <span class="keyword">return</span> C;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -371,7 +360,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html" title="位运算详解">https://longyu.cf/algorithm-and-data-structure/位运算.html</a>
+      <a href="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html" title="高精度算法">https://longyu.cf/algorithm-and-data-structure/高精度.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -419,20 +408,22 @@
           <div class="post-tags">
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
               <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-              <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag"><i class="fa fa-tag"></i> 位运算</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/" rel="tag"><i class="fa fa-tag"></i> 算法模板</a>
+              <a href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 高精度加法</a>
+              <a href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%87%8F%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 高精度减法</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html" rel="prev" title="单调栈的实现">
-                  <i class="fa fa-chevron-left"></i> 单调栈的实现
+                <a href="/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html" rel="prev" title="快速排序算法">
+                  <i class="fa fa-chevron-left"></i> 快速排序算法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html" rel="next" title="单调队列的实现">
-                  单调队列的实现 <i class="fa fa-chevron-right"></i>
+                <a href="/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html" rel="next" title="差分与前缀和">
+                  差分与前缀和 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -526,7 +517,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"c4bcc3ced2373bc27c76fce7e48f6e3c"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LnYo-Cly","repo":"lnyo-cly.github.io","client_id":"3f74f864e35cf3011824","client_secret":"c92febc421476e7190d818b1350d60f155e8b019","admin_user":"LnYo-Cly","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"c0848e0df70edd15402981d704184252"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

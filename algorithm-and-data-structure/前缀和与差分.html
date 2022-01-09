@@ -21,22 +21,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"longyu.cf","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="前缀和前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理： 123456int n &#x3D; nums.length;&#x2F;&#x2F; 前缀和数组int[] preSum &#x3D; new int[n + 1];preSum[0] &#x3D; 0;for (int i &#x3D; 0; i &lt; n; i++)    preSum[i + 1] &#x3D; preSum[i] + nums[i];">
+<meta name="description" content="前缀和 作用：求某一段的和 （ [l,r] ）  前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理： 1234567a[0]&#x3D;0for (int i &#x3D; 1; i &lt;&#x3D;n; i++)    scanf(&quot;%d&quot;,&amp;a[i]);s[0] &#x3D; 0;for (int i &#x3D; 1; i &lt;&#x3D;n; i++)    s[i]&#x3D;s[">
 <meta property="og:type" content="article">
 <meta property="og:title" content="差分与前缀和">
 <meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
-<meta property="og:description" content="前缀和前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理： 123456int n &#x3D; nums.length;&#x2F;&#x2F; 前缀和数组int[] preSum &#x3D; new int[n + 1];preSum[0] &#x3D; 0;for (int i &#x3D; 0; i &lt; n; i++)    preSum[i + 1] &#x3D; preSum[i] + nums[i];">
+<meta property="og:description" content="前缀和 作用：求某一段的和 （ [l,r] ）  前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理： 1234567a[0]&#x3D;0for (int i &#x3D; 1; i &lt;&#x3D;n; i++)    scanf(&quot;%d&quot;,&amp;a[i]);s[0] &#x3D; 0;for (int i &#x3D; 1; i &lt;&#x3D;n; i++)    s[i]&#x3D;s[">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811132123.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811134248.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109194750.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811143617.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811143707.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811143730.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109205120.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811145147.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811150918.png">
-<meta property="article:published_time" content="2021-08-03T12:46:05.000Z">
-<meta property="article:modified_time" content="2021-08-11T07:10:11.225Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109210837.png">
+<meta property="article:published_time" content="2022-01-09T12:46:06.000Z">
+<meta property="article:modified_time" content="2022-01-09T13:08:41.730Z">
 <meta property="article:author" content="璀璨cly">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="数据结构">
@@ -104,9 +107,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">26</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -164,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C"><span class="nav-text">前缀和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C"><span class="nav-text">二维前缀和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C%E6%80%8E%E4%B9%88%E6%B1%82"><span class="nav-text">二维前缀和怎么求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-text">模板</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%AE%E5%88%86"><span class="nav-text">差分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E5%B7%AE%E5%88%86"><span class="nav-text">一维差分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%B7%AE%E5%88%86"><span class="nav-text">二维差分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-text">应用</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C"><span class="nav-text">前缀和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C"><span class="nav-text">二维前缀和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E7%9F%A9%E9%98%B5%E7%9A%84%E5%92%8C"><span class="nav-text">子矩阵的和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C%E6%80%8E%E4%B9%88%E6%B1%82"><span class="nav-text">二维前缀和怎么求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-text">模板</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%AE%E5%88%86"><span class="nav-text">差分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E5%B7%AE%E5%88%86"><span class="nav-text">一维差分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%B7%AE%E5%88%86"><span class="nav-text">二维差分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-text">应用</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,7 +184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -194,7 +197,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -278,16 +281,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-03 20:46:05" itemprop="dateCreated datePublished" datetime="2021-08-03T20:46:05+08:00">2021-08-03</time>
+      <time title="创建时间：2022-01-09 20:46:06 / 修改时间：21:08:41" itemprop="dateCreated datePublished" datetime="2022-01-09T20:46:06+08:00">2022-01-09</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-11 15:10:11" itemprop="dateModified" datetime="2021-08-11T15:10:11+08:00">2021-08-11</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -313,7 +310,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.2k</span>
+      <span>4.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -331,7 +328,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><p>前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理：</p>
+        <h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><blockquote>
+<p>作用：求某一段的和 （ [l,r] ）</p>
+</blockquote>
+<p>前缀和的思路是这样的，对于一个给定的数组 nums，我们额外开辟一个前缀和数组进行预处理：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;=n; i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line"></span><br><span class="line">s[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;=n; i++)</span><br><span class="line">    s[i]=s[i<span class="number">-1</span>]+a[i];</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = nums.length;</span><br><span class="line"><span class="comment">// 前缀和数组</span></span><br><span class="line"><span class="keyword">int</span>[] preSum = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">preSum[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    preSum[i + <span class="number">1</span>] = preSum[i] + nums[i];</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811132123.png" alt="20210811132123"></p>
@@ -356,9 +358,12 @@
 
 <p>这样，给你任何一个分数段，你都能通过前缀和相减快速计算出这个分数段的人数，百分比也就很容易计算了。</p>
 <p>但是，稍微复杂一些的算法问题，不止考察简单的前缀和技巧。比如本文探讨的这道题目，就需要借助前缀和的思路做进一步的优化，借助哈希表去除不必要的嵌套循环。可见对题目的理解和细节的分析能力对于算法的优化是至关重要的。</p>
-<h2 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h2><p>二维前缀和就是求一个矩阵的和</p>
-<p>但是怎么来求呢？</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811143617.png" alt="20210811143617"></p>
+<h2 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h2><p>二维前缀和就是求一个矩阵中所有数的和</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">S[i, j] = 第i行j列格子左上部分所有元素的和</span><br><span class="line">以(x1, y1)为左上角，(x2, y2)为右下角的子矩阵的和为：</span><br><span class="line"></span><br><span class="line">S[x2, y2] - S[x1 - <span class="number">1</span>, y2] - S[x2, y1 - <span class="number">1</span>] + S[x1 - <span class="number">1</span>, y1 - <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109194750.png" alt="20220109194750"></p>
+<hr>
+<h3 id="子矩阵的和"><a href="#子矩阵的和" class="headerlink" title="子矩阵的和"></a>子矩阵的和</h3><p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811143617.png" alt="20210811143617"></p>
 <p>就如图中</p>
 <p>知道了两个点的位置和他们的二维前缀和，</p>
 <p>图中红色是左上角的那个点的二维前缀和，</p>
@@ -395,21 +400,28 @@
 <p>所以黑色部分就只有一个元素也就是（i，j）坐标上的那个元素值</p>
 <p>所以就可以个加法变减法，减法变加法一个性质的</p>
 <p>通过A，B，C和黑色部分来求出D</p>
-<p>所以D就可以等于B+C-D+黑色部分：</p>
+<p>所以D就可以等于B+C-A+黑色部分：</p>
 <p>上面的黄色部分+红色部分+下面的黄色部分+红色部分-红色部分+黑色部分<br>=上面的黄色部分+红色部分+下面的黄色部分+黑色部分</p>
 <p>刚好等于D</p>
 <p>方程式为</p>
 <p>$f[i][j]=f[i−1][j]+f[i][j−1]−f[i−1][j−1]+a[i][j]$</p>
 <h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max = <span class="number">1003</span>;</span><br><span class="line"><span class="keyword">int</span> a[Max][Max];</span><br><span class="line"><span class="keyword">int</span> f[Max][Max];</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">freopen</span>(<span class="string">&quot;acioi.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">	<span class="keyword">int</span> n,m,c;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m &gt;&gt; c;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;++ i)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= m;++ j)</span><br><span class="line">			cin &gt;&gt; a[i][j],f[i][j] = f[i - <span class="number">1</span>][j] + f[i][j - <span class="number">1</span>] - f[i - <span class="number">1</span>][j - <span class="number">1</span>] + a[i][j];</span><br><span class="line">	<span class="keyword">int</span> k;</span><br><span class="line">	cin &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= k;++ i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x1,x2,y1,y2;<span class="comment">//x1,y1是左上角的坐标，另一对是右下角的坐标 </span></span><br><span class="line">		cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;</span><br><span class="line">		cout &lt;&lt; f[x2][y2] - f[x1 - <span class="number">1</span>][y2] - f[x2][y1 - <span class="number">1</span>] + f[x1 - <span class="number">1</span>][y1 - <span class="number">1</span>]; </span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; M &lt;&lt; endl; </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h1><p>差分可以简单的看成序列中每个元素与其前一个元素的差。</p>
 <p>原数组 进行差分，得到差分数组 ，差分数组求前缀和，又得到原数组</p>
 <p>差分数组改变–再求前缀和，得到改变后的数组</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5,6, 4,8, 7, 6,9</span><br><span class="line">5 1 -2 4 -1 -1 3</span><br></pre></td></tr></table></figure>
-<h2 id="一维差分"><a href="#一维差分" class="headerlink" title="一维差分"></a>一维差分</h2><p>让一个序列中某个区间内的所有值均加上或减去一个常数。</p>
+<h2 id="一维差分"><a href="#一维差分" class="headerlink" title="一维差分"></a>一维差分</h2><blockquote>
+<p>一个区间[L,R]中所有的数全部加上一个C<br>让一个序列中某个区间内的所有值均加上或减去一个常数。</p>
+</blockquote>
 <p>假如在 3~8 的区间上加上 5，那我们在差分数组中的 3 位置上加上一个 5 ，再在8+1的位置上减一个5</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//区间[l,r]中的所有值都加上常数c</span></span><br><span class="line">b[l] += c;</span><br><span class="line">b[r+<span class="number">1</span>] -= c;</span><br><span class="line"></span><br><span class="line"><span class="comment">//每次求前缀和都会有 b[l]+c，得到A[i]只需要加上1个C</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h2><p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811145147.png" alt="20210811145147"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109205120.png" alt="20220109205120"></p>
+<hr>
+<h2 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h2><blockquote>
+<p>给一个子矩阵的所有数都加上一个数C<br><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811145147.png" alt="20210811145147"></p>
+</blockquote>
 <p>根据二维前缀和表示的是左上角矩形的和，由于差分只涉及前面相邻的数（由一维可以推出），并且由前面范围的数相加得到这个位置的数。那么类比二维前缀和和一维差分，可以简单推测出二维差分的公式</p>
 <p>$p[i][j]=a[i][j]-a[i-1][j]-a[i][j-1]+a[i-1][j-1]$</p>
 <p>如何从差分矩阵得到原/改变矩阵呢？可以参考下面公式(二维前缀和)</p>
@@ -426,6 +438,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">diff[x1][y1] += c;</span><br><span class="line">diff[x1][y2+<span class="number">1</span>] -=c;</span><br><span class="line">diff[x2+<span class="number">1</span>][y1] -=c;</span><br><span class="line">diff[x2+<span class="number">1</span>][y2+<span class="number">1</span>] += c;</span><br></pre></td></tr></table></figure>
 
 <p>最后在求前缀和 回去就行</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220109210837.png" alt="20220109210837"></p>
 
     </div>
 
@@ -517,14 +530,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html" rel="prev" title="单调栈的实现">
-                  <i class="fa fa-chevron-left"></i> 单调栈的实现
+                <a href="/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html" rel="prev" title="高精度算法">
+                  <i class="fa fa-chevron-left"></i> 高精度算法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html" rel="next" title="优先队列（堆）的实现">
-                  优先队列（堆）的实现 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -558,14 +568,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">26k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">22 分钟</span>
+    <span title="站点阅读时长">23 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
