@@ -91,9 +91,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">28</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">30</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -167,7 +167,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,7 +180,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -237,7 +237,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E5%8F%8C%E6%8C%87%E9%92%88.html">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
@@ -250,7 +250,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/algorithm-and-data-structure/%E5%8F%8C%E6%8C%87%E9%92%88.html" class="post-title-link" itemprop="url">双指针算法</a>
+          <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html" class="post-title-link" itemprop="url">单调栈的实现</a>
         </h2>
 
         <div class="post-meta-container">
@@ -271,7 +271,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-11 17:35:11" itemprop="dateModified" datetime="2021-08-11T17:35:11+08:00">2021-08-11</time>
+        <time title="修改时间：2021-08-11 11:02:20" itemprop="dateModified" datetime="2021-08-11T11:02:20+08:00">2021-08-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -309,49 +309,281 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h1><p>我把双指针技巧再分为两类，一类是「快慢指针」，一类是「左右指针」。前者解决主要解决链表中的问题，比如典型的判定链表中是否包含环；后者主要解决数组（或者字符串）中的问题，比如二分查找。</p>
-<h2 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h2><p>快慢指针一般都初始化指向链表的头结点 head，前进时快指针 fast 在前，慢指针 slow 在后，巧妙解决一些链表中的问题。</p>
-<h3 id="判定链表中是否含有环"><a href="#判定链表中是否含有环" class="headerlink" title="判定链表中是否含有环"></a>判定链表中是否含有环</h3><p>单链表的特点是每个节点只知道下一个节点，所以一个指针的话无法判断链表中是否含有环的。</p>
-<p>如果链表中不含环，那么这个指针最终会遇到空指针 null 表示链表到头了，这还好说，可以判断该链表不含环。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function">boolean <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (head != null)</span><br><span class="line">        head = head.next;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h1><p><code>单调栈</code>实际上就是<code>栈</code>，只是利用了一些巧妙的逻辑，使得每次<code>新元素入栈</code>后，栈内的元素都保持<code>有序</code>（单调递增或单调递减）。</p>
+<p>单调栈用途不太广泛，只处理一种典型的问题，叫做 <code>Next Greater Element</code>。本文用讲解单调队列的算法模版解决这类问题，并且探讨处理「循环数组」的策略。</p>
+<p>首先，讲解 <code>Next Greater Number</code> 的原始问题：给你一个数组，返回一个等长的数组，对应索引<code>存储</code>着<code>下一个更大</code>元素，如果没有更大的元素，就存 -1。不好用语言解释清楚，直接上一个例子：</p>
+<p>给你一个数组 <code>[2,1,2,4,3]</code>，你返回数组 <code>[4,2,4,-1,-1]</code>。</p>
+<p>解释：第一个 2 后面比 2 大的数是 4; 1 后面比 1 大的数是 2；第二个 2 后面比 2 大的数是 4; 4 后面没有比 4 大的数，填 -1；3 后面没有比 3 大的数，填 -1。</p>
+<p>这道题的暴力解法很好想到，就是对每个元素后面都进行扫描，找到第一个更大的元素就行了。但是暴力解法的时间复杂度是 O($n^2$)</p>
+<p>这个问题可以这样抽象思考：把数组的元素想象成并列站立的人，元素大小想象成人的身高。这些人面对你站成一列，如何求元素「2」的 Next Greater Number 呢？很简单，如果能够看到元素「2」，那么他后面可见的第一个人就是「2」的 Next Greater Number，因为比「2」小的元素身高不够，都被「2」挡住了，第一个露出来的就是答案。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811102755.png" alt="20210811102755"></p>
+<p>这个情景很好理解吧？带着这个抽象的情景，先来看下代码。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">nextGreaterElement</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(nums.size())</span></span>; <span class="comment">// 存放答案的数组</span></span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123; <span class="comment">// 倒着往栈里放</span></span><br><span class="line">        <span class="keyword">while</span> (!s.<span class="built_in">empty</span>() &amp;&amp; s.<span class="built_in">top</span>() &lt;= nums[i]) &#123; <span class="comment">// 判定个子高矮</span></span><br><span class="line"></span><br><span class="line">            s.<span class="built_in">pop</span>(); <span class="comment">// 矮个起开，反正也被挡着了。。。</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ans[i] = s.<span class="built_in">empty</span>() ? <span class="number">-1</span> : s.<span class="built_in">top</span>(); <span class="comment">// 这个元素身后的第一个高个</span></span><br><span class="line"></span><br><span class="line">        s.<span class="built_in">push</span>(nums[i]); <span class="comment">// 进队，接受之后的身高判定吧！</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>但是如果链表中含有环，那么这个指针就会陷入死循环，因为环形数组中没有 null 指针作为尾部节点。</p>
-<p>经典解法就是用两个指针，一个跑得快，一个跑得慢。如果不含有环，跑得快的那个指针最终会遇到 null，说明链表不含环；如果含有环，快指针最终会超慢指针一圈，和慢指针相遇，说明链表含有环。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">boolean <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    ListNode fast, slow;</span><br><span class="line">    fast = slow = head;</span><br><span class="line">    <span class="keyword">while</span> (fast != null &amp;&amp; fast.next != null) &#123;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        <span class="keyword">if</span> (fast == slow) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这就是单调队列解决问题的模板。for 循环要从后往前扫描元素，因为我们借助的是栈的结构，倒着入栈，其实是正着出栈。while 循环是把两个“高个”元素之间的元素排除，因为他们的存在没有意义，前面挡着个“更高”的元素，所以他们不可能被作为后续进来的元素的 Next Great Number 了。</p>
+<p>这个算法的时间复杂度不是那么直观，如果你看到 for 循环嵌套 while 循环，可能认为这个算法的复杂度也是 O(n^2)，但是实际上这个算法的复杂度只有 O(n)。</p>
+<p>分析它的时间复杂度，要从整体来看：总共有 n 个元素，每个元素都被 push 入栈了一次，而最多会被 pop 一次，没有任何冗余操作。所以总的计算规模是和元素规模 n 成正比的，也就是 O(n) 的复杂度。</p>
+<p>现在，你已经掌握了单调栈的使用技巧，来一个简单的变形来加深一下理解。</p>
+<p>给你一个数组 T = [73, 74, 75, 71, 69, 72, 76, 73]，这个数组存放的是近几天的天气气温（这气温是铁板烧？不是的，这里用的华氏度）。你返回一个数组，计算：对于每一天，你还要至少等多少天才能等到一个更暖和的气温；如果等不到那一天，填 0 。</p>
+<p>举例：给你 T = [73, 74, 75, 71, 69, 72, 76, 73]，你返回 [1, 1, 4, 2, 1, 1, 0, 0]。</p>
+<p>解释：第一天 73 华氏度，第二天 74 华氏度，比 73 大，所以对于第一天，只要等一天就能等到一个更暖和的气温。后面的同理。</p>
+<p>你已经对 Next Greater Number 类型问题有些敏感了，这个问题本质上也是找 Next Greater Number，只不过现在不是问你 Next Greater Number 是多少，而是问你当前距离 Next Greater Number 的距离而已。</p>
+<p>相同类型的问题，相同的思路，直接调用单调栈的算法模板，稍作改动就可以啦，直接上代码把。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">dailyTemperatures</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; T)</span> </span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">ans</span><span class="params">(T.size())</span></span>;</span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; s; <span class="comment">// 这里放元素索引，而不是元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = T.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!s.<span class="built_in">empty</span>() &amp;&amp; T[s.<span class="built_in">top</span>()] &lt;= T[i]) &#123;</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        ans[i] = s.<span class="built_in">empty</span>() ? <span class="number">0</span> : (s.<span class="built_in">top</span>() - i); <span class="comment">// 得到索引间距</span></span><br><span class="line">        s.<span class="built_in">push</span>(i); <span class="comment">// 加入索引，而不是元素</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="已知链表中含有环，返回这个环的起始位置"><a href="#已知链表中含有环，返回这个环的起始位置" class="headerlink" title="已知链表中含有环，返回这个环的起始位置"></a>已知链表中含有环，返回这个环的起始位置</h3><p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811151709.png" alt="20210811151709"></p>
-<p>这个问题一点都不困难，有点类似脑筋急转弯，先直接看代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ListNode <span class="title">detectCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    ListNode fast, slow;</span><br><span class="line">    fast = slow = head;</span><br><span class="line">    <span class="keyword">while</span> (fast != null &amp;&amp; fast.next != null) &#123;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        <span class="keyword">if</span> (fast == slow) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 上面的代码类似 hasCycle 函数</span></span><br><span class="line">    slow = head;</span><br><span class="line">    <span class="keyword">while</span> (slow != fast) &#123;</span><br><span class="line">        fast = fast.next;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以看到，当快慢指针相遇时，让其中任一个指针指向头节点，然后让它俩以相同速度前进，再次相遇时所在的节点位置就是环开始的位置。这是为什么呢？</p>
-<p>第一次相遇时，假设慢指针 slow 走了 k 步，那么快指针 fast 一定走了 2k 步，也就是说比 slow 多走了 k 步（也就是环的长度）。<br><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811151935.png" alt="20210811151935"></p>
-<p>设相遇点距环的起点的距离为 m，那么环的起点距头结点 head 的距离为 k - m，也就是说如果从 head 前进 k - m 步就能到达环起点。</p>
-<p>巧的是，如果从相遇点继续前进 k - m 步，也恰好到达环起点。</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811151947.png" alt="20210811151947"></p>
-<p>所以，只要我们把快慢指针中的任一个重新指向 head，然后两个指针同速前进，k - m 步后就会相遇，相遇之处就是环的起点了</p>
-<h3 id="寻找链表的中点"><a href="#寻找链表的中点" class="headerlink" title="寻找链表的中点"></a>寻找链表的中点</h3><p>类似上面的思路，我们还可以让快指针一次前进两步，慢指针一次前进一步，当快指针到达链表尽头时，慢指针就处于链表的中间位置</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (fast != null &amp;&amp; fast.next != null) &#123;</span><br><span class="line">    fast = fast.next.next;</span><br><span class="line">    slow = slow.next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// slow 就在中间位置</span></span><br><span class="line"><span class="keyword">return</span> slow;</span><br></pre></td></tr></table></figure>
+<p>单调栈讲解完毕。下面开始另一个重点：如何处理<code>「循环数组」</code>。</p>
+<p>同样是 Next Greater Number，现在假设给你的数组是个环形的，如何处理？</p>
+<p>给你一个数组 <code>[2,1,2,4,3]</code>，你返回数组 <code>[4,2,4,-1,4]</code>。拥有了环形属性，最后一个元素 3 绕了一圈后找到了比自己大的元素 4 。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811105745.png" alt="20210811105745"></p>
+<p>首先，计算机的内存都是线性的，没有真正意义上的环形数组，但是我们可以模拟出环形数组的效果，一般是通过 % 运算符求模（余数），获得环形特效：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> n = arr.length, index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="built_in">print</span>(arr[index % n]);</span><br><span class="line">    index++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>当链表的长度是奇数时，slow 恰巧停在中点位置；如果长度是偶数，slow 最终的位置是中间偏右：</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811163211.png" alt="20210811163211"></p>
-<p>寻找链表中点的一个重要作用是对链表进行归并排序。</p>
-<p>回想数组的归并排序：求中点索引递归地把数组二分，最后合并两个有序数组。对于链表，合并两个有序链表是很简单的，难点就在于二分。</p>
-<p>但是现在你学会了找到链表的中点，就能实现链表的二分了。关于归并排序的具体内容本文就不具体展开了。</p>
-<h3 id="寻找链表的倒数第-k-个元素"><a href="#寻找链表的倒数第-k-个元素" class="headerlink" title="寻找链表的倒数第 k 个元素"></a>寻找链表的倒数第 k 个元素</h3><p>我们的思路还是使用快慢指针，让快指针先走 k 步，然后快慢指针开始同速前进。这样当快指针走到链表末尾 null 时，慢指针所在的位置就是倒数第 k 个链表节点（为了简化，假设 k 不会超过链表长度）：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ListNode slow, fast;</span><br><span class="line">slow = fast = head;</span><br><span class="line"><span class="keyword">while</span> (k-- &gt; <span class="number">0</span>) </span><br><span class="line">    fast = fast.next;</span><br><span class="line"><span class="keyword">while</span> (fast != null) &#123;</span><br><span class="line">    slow = slow.next;</span><br><span class="line">    fast = fast.next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> slow;</span><br></pre></td></tr></table></figure>
+<p>回到 Next Greater Number 的问题，增加了环形属性后，问题的难点在于：这个 Next 的意义不仅仅是当前元素的右边了，有可能出现在当前元素的左边（如上例）。</p>
+<p>明确问题，问题就已经解决了一半了。我们可以考虑这样的思路：将原始数组“翻倍”，就是在后面再接一个原始数组，这样的话，按照之前“比身高”的流程，每个元素不仅可以比较自己右边的元素，而且也可以和左边的元素比较了。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811110157.png" alt="20210811110157"></p>
+<p>怎么实现呢？你当然可以把这个双倍长度的数组构造出来，然后套用算法模板。但是，我们可以不用构造新数组，而是利用循环数组的技巧来模拟。直接看代码吧：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">nextGreaterElements</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">res</span><span class="params">(n)</span></span>; <span class="comment">// 存放结果</span></span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    <span class="comment">// 假装这个数组长度翻倍了</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span> * n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!s.<span class="built_in">empty</span>() &amp;&amp; s.<span class="built_in">top</span>() &lt;= nums[i % n])</span><br><span class="line">            s.<span class="built_in">pop</span>();</span><br><span class="line">        res[i % n] = s.<span class="built_in">empty</span>() ? <span class="number">-1</span> : s.<span class="built_in">top</span>();</span><br><span class="line">        s.<span class="built_in">push</span>(nums[i % n]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<h2 id="左右指针的常用算法"><a href="#左右指针的常用算法" class="headerlink" title="左右指针的常用算法"></a>左右指针的常用算法</h2><p>左右指针在数组中实际是指两个索引值，一般初始化为 left = 0, right = nums.length - 1 。</p>
-<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>前文「二分查找」有详细讲解，这里只写最简单的二分算法，旨在突出它的双指针特性：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>; </span><br><span class="line">    <span class="keyword">int</span> right = nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (right + left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> mid; </span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; target)</span><br><span class="line">            left = mid + <span class="number">1</span>; </span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &gt; target)</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210811170839.png" alt="20210811170839"></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] <span class="built_in">twoSum</span>(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = nums[left] + nums[right];</span><br><span class="line">        <span class="keyword">if</span> (sum == target) &#123;</span><br><span class="line">            <span class="comment">// 题目要求的索引是从 1 开始的</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;left + <span class="number">1</span>, right + <span class="number">1</span>&#125;;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; target) &#123;</span><br><span class="line">            left++; <span class="comment">// 让 sum 大一点</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; target) &#123;</span><br><span class="line">            right--; <span class="comment">// 让 sum 小一点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="反转数组"><a href="#反转数组" class="headerlink" title="反转数组"></a>反转数组</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right = nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="comment">// swap(nums[left], nums[right])</span></span><br><span class="line">        <span class="keyword">int</span> temp = nums[left];</span><br><span class="line">        nums[left] = nums[right];</span><br><span class="line">        nums[right] = temp;</span><br><span class="line">        left++; right--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="滑动窗口算法"><a href="#滑动窗口算法" class="headerlink" title="滑动窗口算法"></a>滑动窗口算法</h3><p>这也许是双指针技巧的最高境界了，如果掌握了此算法，可以解决一大类子字符串匹配的问题，不过「滑动窗口」稍微比上述的这些算法复杂些。</p>
-<p>幸运的是，这类算法是有框架模板的，而且这篇文章就讲解了「滑动窗口」算法模板，帮大家秒杀几道 LeetCode 子串匹配的问题。</p>
+    
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
+      <meta itemprop="name" content="璀璨cly">
+      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没有秘密的秘密小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html" class="post-title-link" itemprop="url">并查集的理解与实现</a>
+        </h2>
+
+        <div class="post-meta-container">
+
+
+          <div class="post-meta">
+
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-03 20:46:05 / 修改时间：14:56:45" itemprop="dateCreated datePublished" datetime="2021-08-03T20:46:05+08:00">2021-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><blockquote>
+<p>将两个集合合并–》例如连通分支合并一个</p>
+<p>询问两个元素是否在一个集合当中</p>
+<p>近乎O（1）</p>
+</blockquote>
+<h2 id="简单理解（转载）"><a href="#简单理解（转载）" class="headerlink" title="简单理解（转载）"></a>简单理解（转载）</h2><p>为了解释并查集的原理，我将举一个更有爱的例子。 话说江湖上散落着各式各样的大侠，有上千个之多。他们没有什么正当职业，整天背着剑在外面走来走去，碰到和自己不是一路人的，就免不了要打一架。但大侠们有一个优点就是讲义气，绝对不打自己的朋友。而且他们信奉“朋友的朋友就是我的朋友”，只要是能通过朋友关系串联起来的，不管拐了多少个弯，都认为是自己人。这样一来，江湖上就形成了一个一个的群落，通过两两之间的朋友关系串联起来。而不在同一个群落的人，无论如何都无法通过朋友关系连起来，于是就可以放心往死了打。但是两个原本互不相识的人，如何判断是否属于一个朋友圈呢？</p>
+<p>我们可以在每个朋友圈内推举出一个比较有名望的人，作为该圈子的代表人物，这样，每个圈子就可以这样命名“齐达内朋友之队”“罗纳尔多朋友之队”……两人只要互相对一下自己的队长是不是同一个人，就可以确定敌友关系了。</p>
+<p>但是还有问题啊，大侠们只知道自己直接的朋友是谁，很多人压根就不认识队长，要判断自己的队长是谁，只能漫无目的的通过朋友的朋友关系问下去：“你是不是队长？你是不是队长？”这样一来，队长面子上挂不住了，而且效率太低，还有可能陷入无限循环中。于是队长下令，重新组队。队内所有人实行分等级制度，形成树状结构，我队长就是根节点，下面分别是二级队员、三级队员。每个人只要记住自己的上级是谁就行了。遇到判断敌友的时候，只要一层层向上问，直到最高层，就可以在短时间内确定队长是谁了。由于我们关心的只是两个人之间是否连通，至于他们是如何连通的，以及每个圈子内部的结构是怎样的，甚至队长是谁，并不重要。所以我们可以放任队长随意重新组队，只要不搞错敌友关系就好了。于是，门派产生了。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210803124721.png" alt="20210803124721"></p>
+<p>下面我们来看并查集的实现。 int pre[1000]; 这个数组，记录了每个大侠的上级是谁。大侠们从1或者0开始编号（依据题意而定），pre[15]=3就表示15号大侠的上级是3号大侠。如果一个人的上级就是他自己，那说明他就是掌门人了，查找到此为止。也有孤家寡人自成一派的，比如欧阳锋，那么他的上级就是他自己。每个人都只认自己的上级。比如胡青牛同学只知道自己的上级是杨左使。张无忌是谁？不认识！要想知道自己的掌门是谁，只能一级级查上去。 find这个函数就是找掌门用的，意义再清楚不过了（路径压缩算法先不论，后面再说）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>                    <span class="comment">//查找我（x）的掌门</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r=x;                      <span class="comment">//委托 r 去找掌门</span></span><br><span class="line">    <span class="keyword">while</span> (pre[r ]!=r)           <span class="comment">//如果r的上级不是r自己（也就是说找到的大侠他不是掌门 = =）</span></span><br><span class="line">    r=pre[r ] ;                 <span class="comment">// r 就接着找他的上级，直到找到掌门为止。</span></span><br><span class="line">    <span class="keyword">return</span>  r ;                <span class="comment">//掌门驾到~~~</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再来看看路径压缩算法。建立门派的过程是用join函数两个人两个人地连接起来的，谁当谁的手下完全随机。最后的树状结构会变成什么胎唇样，我也完全无法预计，一字长蛇阵也有可能。这样查找的效率就会比较低下。最理想的情况就是所有人的直接上级都是掌门，一共就两级结构，只要找一次就找到掌门了。哪怕不能完全做到，也最好尽量接近。这样就产生了路径压缩算法。 设想这样一个场景：两个互不相识的大侠碰面了，想知道能不能揍。 于是赶紧打电话问自己的上级：“你是不是掌门？” 上级说：“我不是呀，我的上级是谁谁谁，你问问他看看。” 一路问下去，原来两人的最终boss都是东厂曹公公。 “哎呀呀，原来是记己人，西礼西礼，在下三营六组白面葫芦娃!” “幸会幸会，在下九营十八组仙子狗尾巴花！” 两人高高兴兴地手拉手喝酒去了。 “等等等等，两位同学请留步，还有事情没完成呢！”我叫住他俩。 “哦，对了，还要做路径压缩。”两人醒悟。 白面葫芦娃打电话给他的上级六组长：“组长啊，我查过了，其习偶们的掌门是曹公公。不如偶们一起及接拜在曹公公手下吧，省得级别太低，以后查找掌门麻环。” “唔，有道理。” 白面葫芦娃接着打电话给刚才拜访过的三营长……仙子狗尾巴花也做了同样的事情。 这样，查询中所有涉及到的人物都聚集在曹公公的直接领导下。每次查询都做了优化处理，所以整个门派树的层数都会维持在比较低的水平上。路径压缩的代码，看得懂很好，看不懂也没关系，直接抄上用就行了。总之它所实现的功能就是这么个意思。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210803124845.png" alt="20210803124845"></p>
+<h2 id="acwing模板"><a href="#acwing模板" class="headerlink" title="acwing模板"></a>acwing模板</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">原模板:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span> <span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != p[x]) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">    <span class="keyword">return</span> p[x];</span><br><span class="line">&#125;</span><br><span class="line">可以把y总的模板拆分一下，会方便理解些</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span> <span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != p[x])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="built_in">find</span>(p[x]); <span class="comment">//寻找根结点，找到后回溯</span></span><br><span class="line">        p[x] = t; <span class="comment">//路径压缩</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100010</span>;</span><br><span class="line"><span class="keyword">int</span> p[N];<span class="comment">//定义多个集合</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p[x]!=x) p[x]=<span class="built_in">find</span>(p[x]);</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    经上述可以发现,每个集合中只有祖宗节点的p[x]值等于他自己,即:</span></span><br><span class="line"><span class="comment">    p[x]=x;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">return</span> p[x];</span><br><span class="line">    <span class="comment">//找到了便返回祖宗节点的值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) p[i]=i;</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">char</span> op[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">int</span> a,b;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s%d%d&quot;</span>,op,&amp;a,&amp;b);</span><br><span class="line">        <span class="keyword">if</span>(*op==<span class="string">&#x27;M&#x27;</span>) p[<span class="built_in">find</span>(a)]=<span class="built_in">find</span>(b);<span class="comment">//集合合并操作</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">find</span>(a)==<span class="built_in">find</span>(b))</span><br><span class="line">        <span class="comment">//如果祖宗节点一样,就输出yes</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;No\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
+      <meta itemprop="name" content="璀璨cly">
+      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没有秘密的秘密小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html" class="post-title-link" itemprop="url">单调队列的实现</a>
+        </h2>
+
+        <div class="post-meta-container">
+
+
+          <div class="post-meta">
+
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-03 20:46:05" itemprop="dateCreated datePublished" datetime="2021-08-03T20:46:05+08:00">2021-08-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-09 21:44:10" itemprop="dateModified" datetime="2021-08-09T21:44:10+08:00">2021-08-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h1><blockquote>
+<p>也许这种数据结构的名字你没听过，其实没啥难的，就是一个「队列」，只是使用了一点巧妙的方法，使得队列中的元素单调递增（或递减）。这个数据结构有什么用？可以解决滑动窗口的一系列问题。</p>
+<p>单调队列是一种主要用于解决滑动窗口类问题的数据结构，即，在长度为 <code>n</code> 的序列中，求每个长度为 <code>n</code> 的区间的区间最值</p>
+</blockquote>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210809212054.png" alt="题目"></p>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p>在一堆数字中，已知最值，如果给这堆数添加一个数，那么比较一下就可以很快算出最值；但如果减少一个数，就不一定能很快得到最值了，而要遍历所有数重新找最值。</p>
+<p>回到这道题的场景，每个窗口前进的时候，要添加一个数同时减少一个数，所以想在 O(1) 的时间得出新的最值，就需要「单调队列」这种特殊的数据结构来辅助了。</p>
+<p>一个普通的队列</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="comment">// 或 enqueue，在队尾加入元素 n</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// 或 dequeue，删除队头元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>单调队列操作</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MonotonicQueue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="comment">// 在队尾添加元素 n</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回当前队列中的最大值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 队头元素如果是 n，删除它</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，这几个 API 的实现方法肯定跟一般的 Queue 不一样，不过我们暂且不管，而且认为这几个操作的时间复杂度都是 O(1)，先把这道「滑动窗口」问题的解答框架搭出来：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">maxSlidingWindow</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums,<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    MonotonicQueue window;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i &lt; k <span class="number">-1</span>)</span><br><span class="line">        &#123;<span class="comment">//先把窗口的前 k - 1 填满</span></span><br><span class="line">            window.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;<span class="comment">// 窗口开始向前滑动</span></span><br><span class="line">            window.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">            res.<span class="built_in">push_back</span>(window.<span class="built_in">max</span>());</span><br><span class="line">            window.<span class="built_in">pop</span>(nums[i - k +<span class="number">1</span>]);</span><br><span class="line">        <span class="comment">// nums[i - k + 1] 就是窗口最后的元素</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210809212742.png" alt="20210809212742"></p>
+<h2 id="实现单调队列"><a href="#实现单调队列" class="headerlink" title="实现单调队列"></a>实现单调队列</h2><p>首先我们要认识另一种数据结构：deque，即双端队列。很简单：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">deque</span> &#123;</span></span><br><span class="line"><span class="comment">// 在队头插入元素 n</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push_front</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="comment">// 在队尾插入元素 n</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push_back</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="comment">// 在队头删除元素</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop_front</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// 在队尾删除元素</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop_back</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// 返回队头元素</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">front</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">// 返回队尾元素</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">back</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而且，这些操作的复杂度都是 O(1)。这其实不是啥稀奇的数据结构，用链表作为底层结构的话，很容易实现这些功能。</p>
+<p>「单调队列」的核心思路和「单调栈」类似。单调队列的 push 方法依然在队尾添加元素，但是要把前面比新元素小的元素都删掉：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MonotonicQueue</span>&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    deque&lt;<span class="keyword">int</span>&gt; data;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!data.<span class="built_in">empty</span>()&amp;&amp; data.<span class="built_in">back</span>()&lt; n)</span><br><span class="line">                data.<span class="built_in">pop_back</span>();</span><br><span class="line">        data.<span class="built_in">push_back</span>(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>你可以想象，加入数字的大小代表人的体重，把前面体重不足的都压扁了，直到遇到更大的量级才停住</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210809212959.png" alt="20210809212959"></p>
+<p>如果每个元素被加入时都这样操作，最终单调队列中的元素大小就会保持一个单调递减的顺序，因此我们的 max() API 可以可以这样写：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> data.<span class="built_in">front</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>pop() API 在队头删除元素 n，也很好写：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!data.<span class="built_in">empty</span>()&amp;&amp; data.<span class="built_in">front</span>()== n)</span><br><span class="line">        data.<span class="built_in">pop_front</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之所以要判断 <code>data.front() == n</code>，是因为我们想删除的队头元素 n 可能已经被「压扁」了，这时候就不用删除了：<br><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210809213911.png" alt="20210809213911"></p>
+<p>至此，单调队列设计完毕，看下完整的解题代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">classMonotonicQueue&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    deque&lt;<span class="keyword">int</span>&gt; data;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">while</span>(!data.<span class="built_in">empty</span>()&amp;&amp; data.<span class="built_in">back</span>()&lt; n)</span><br><span class="line">            data.<span class="built_in">pop_back</span>();</span><br><span class="line">        data.<span class="built_in">push_back</span>(n);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> data.<span class="built_in">front</span>();&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(!data.<span class="built_in">empty</span>()&amp;&amp; data.<span class="built_in">front</span>()== n)</span><br><span class="line">            data.<span class="built_in">pop_front</span>();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">maxSlidingWindow</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">MonotonicQueue window;</span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(i &lt; k <span class="number">-1</span>)&#123;<span class="comment">//先填满窗口的前 k - 1</span></span><br><span class="line">            window.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;<span class="comment">// 窗口向前滑动</span></span><br><span class="line">            window.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">            res.<span class="built_in">push_back</span>(window.<span class="built_in">max</span>());</span><br><span class="line">            window.<span class="built_in">pop</span>(nums[i - k +<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>单调队列在添加元素的时候靠删除元素保持队列的单调性</p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>读者可能疑惑，push 操作中含有 while 循环，时间复杂度不是 O(1) 呀，那么本算法的时间复杂度应该不是线性时间吧？</p>
+<p>单独看 push 操作的复杂度确实不是 O(1)，但是算法整体的复杂度依然是 O(N) 线性时间。要这样想，nums 中的每个元素最多被 push_back 和 pop_back 一次，没有任何多余操作，所以整体的复杂度还是 O(N)。</p>
+<p>空间复杂度就很简单了，就是窗口的大小 O(k)。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sliding-window-maximum/">LeetCode-滑动窗口的最大值</a></p>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">maxSlidingWindow</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">       vector&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">       <span class="keyword">int</span> q[nums.<span class="built_in">size</span>()], hh=<span class="number">0</span>, tt=<span class="number">-1</span>;</span><br><span class="line">       <span class="built_in">memset</span>(q, <span class="number">0</span>, <span class="keyword">sizeof</span> q);</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">           <span class="keyword">if</span>(hh&lt;=tt &amp;&amp; q[hh]&lt;=i-k) hh ++;</span><br><span class="line">           <span class="keyword">while</span>(hh&lt;=tt &amp;&amp; nums[q[tt]] &lt;= nums[i]) tt--;</span><br><span class="line">           q[++ tt] = i;</span><br><span class="line">           <span class="keyword">if</span>(i&gt;=k<span class="number">-1</span>) res.<span class="built_in">push_back</span>(nums[q[hh]]);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> res;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1000010</span>;</span><br><span class="line"><span class="keyword">int</span> a[N], q[N], hh, tt = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++ i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">        <span class="keyword">if</span> (i - k + <span class="number">1</span> &gt; q[hh]) ++ hh;                  <span class="comment">// 若队首出窗口，hh加1</span></span><br><span class="line">        <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; a[i] &lt;= a[q[tt]]) -- tt;    <span class="comment">// 若队尾不单调，tt减1</span></span><br><span class="line">        q[++ tt] = i;                                  <span class="comment">// 下标加到队尾</span></span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span> &gt;= k) <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[q[hh]]);       <span class="comment">// 输出结果</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    hh = <span class="number">0</span>; tt = <span class="number">-1</span>;                                   <span class="comment">// 重置！</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++ i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i - k + <span class="number">1</span> &gt; q[hh]) ++ hh;</span><br><span class="line">        <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; a[i] &gt;= a[q[tt]]) -- tt;</span><br><span class="line">        q[++ tt] = i;</span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span> &gt;= k) <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[q[hh]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//----</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> n, k, q[N], a[N];<span class="comment">//q[N]存的是数组下标</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tt = <span class="number">-1</span>, hh=<span class="number">0</span>;<span class="comment">//hh队列头 tt队列尾</span></span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;n; i ++) cin&gt;&gt;a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//维持滑动窗口的大小</span></span><br><span class="line">        <span class="comment">//当队列不为空(hh &lt;= tt) 且 当当前滑动窗口的大小(i - q[hh] + 1)&gt;我们设定的</span></span><br><span class="line">        <span class="comment">//滑动窗口的大小(k),队列弹出队列头元素以维持滑动窗口的大小</span></span><br><span class="line">        <span class="keyword">if</span>(hh &lt;= tt &amp;&amp; k &lt; i - q[hh] + <span class="number">1</span>) hh ++;</span><br><span class="line">        <span class="comment">//构造单调递增队列</span></span><br><span class="line">        <span class="comment">//当队列不为空(hh &lt;= tt) 且 当队列队尾元素&gt;=当前元素(a[i])时,那么队尾元素</span></span><br><span class="line">        <span class="comment">//就一定不是当前窗口最小值,删去队尾元素,加入当前元素(q[ ++ tt] = i)</span></span><br><span class="line">        <span class="keyword">while</span>(hh &lt;= tt &amp;&amp; a[q[tt]] &gt;= a[i]) tt --;</span><br><span class="line">        q[ ++ tt] = i;</span><br><span class="line">        <span class="keyword">if</span>(i + <span class="number">1</span> &gt;= k) <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[q[hh]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    hh = <span class="number">0</span>,tt = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(hh &lt;= tt &amp;&amp; k &lt; i - q[hh] + <span class="number">1</span>) hh ++;</span><br><span class="line">        <span class="keyword">while</span>(hh &lt;= tt &amp;&amp; a[q[tt]] &lt;= a[i]) tt --;</span><br><span class="line">        q[ ++ tt] = i;</span><br><span class="line">        <span class="keyword">if</span>(i + <span class="number">1</span> &gt;= k ) <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[q[hh]]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -616,14 +848,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">29k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">23 分钟</span>
+    <span title="站点阅读时长">27 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
