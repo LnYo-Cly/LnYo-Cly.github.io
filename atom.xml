@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2022-01-12T11:57:10.225Z</updated>
+  <updated>2022-01-13T09:34:08.399Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>STL</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/STL.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/STL.html</id>
+    <published>2022-01-13T12:46:07.000Z</published>
+    <updated>2022-01-13T09:34:08.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;#include &lt;vector&gt;&lt;br&gt;vector&lt;int&gt; a&lt;br&gt;vector 变长数组，倍增思想&lt;br&gt;    size()&lt;br&gt;    empty()&lt;br&gt;    clear()&lt;br&gt;    front()/back()&lt;br&gt;   </summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="STL" scheme="https://longyu.cf/tags/STL/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>哈希表hash</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html</id>
+    <published>2022-01-13T12:46:06.000Z</published>
+    <updated>2022-01-13T09:21:25.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;哈希表&quot;&gt;&lt;a href=&quot;#哈希表&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="哈希表" scheme="https://longyu.cf/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="hash" scheme="https://longyu.cf/tags/hash/"/>
+    
+  </entry>
   
   <entry>
     <title>堆</title>
@@ -106,11 +170,11 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
     <category term="trie树" scheme="https://longyu.cf/tags/trie%E6%A0%91/"/>
     
     <category term="前缀树" scheme="https://longyu.cf/tags/%E5%89%8D%E7%BC%80%E6%A0%91/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
@@ -396,37 +460,6 @@
   </entry>
   
   <entry>
-    <title>快速排序算法</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html</id>
-    <published>2022-01-08T12:46:05.000Z</published>
-    <updated>2022-01-08T12:03:49.960Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
-    <category term="快速排序" scheme="https://longyu.cf/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>归并排序算法</title>
     <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html</id>
@@ -491,18 +524,18 @@
   </entry>
   
   <entry>
-    <title>单调栈的实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-11T03:02:20.992Z</updated>
+    <title>快速排序算法</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BF%AB%E6%8E%92.html</id>
+    <published>2022-01-08T12:46:05.000Z</published>
+    <updated>2022-01-08T12:03:49.960Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;单调栈&quot;&gt;&lt;a href=&quot;#单调栈&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -515,7 +548,9 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="单调栈" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="快速排序" scheme="https://longyu.cf/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -588,64 +623,31 @@
   </entry>
   
   <entry>
-    <title>VIP_Canceler V1.4.1</title>
-    <link href="https://longyu.cf/xposed-module/VIP-Canceler-V1-4-1.html"/>
-    <id>https://longyu.cf/xposed-module/VIP-Canceler-V1-4-1.html</id>
-    <published>2021-07-23T09:36:16.000Z</published>
-    <updated>2021-07-23T15:30:55.063Z</updated>
+    <title>单调栈的实现</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html</id>
+    <published>2021-08-03T12:46:05.000Z</published>
+    <updated>2021-08-11T03:02:20.992Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;VIP-Canceler-V1-4-1&quot;&gt;&lt;a href=&quot;#VIP-Canceler-V1-4-1&quot; class=&quot;headerlink&quot; title=&quot;VIP_Canceler V1.4.1&quot;&gt;&lt;/a&gt;VIP_Canceler V1.4.1&lt;/h1&gt;&lt;h2 id=&quot;1-更新日志：&quot;&gt;&lt;a href=&quot;#1-更新日志：&quot; class=&quot;headerlink&quot; title=&quot;1. 更新日志：&quot;&gt;&lt;/a&gt;1. 更新日志：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;更新Fake Location[1.3.0.2]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1.3之前的版本将不在适配&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;减小了内存占用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2-支持软件：&quot;&gt;&lt;a href=&quot;#2-支持软件：&quot; class=&quot;headerlink&quot; title=&quot;2. 支持软件：&quot;&gt;&lt;/a&gt;2. 支持软件：&lt;/h2&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;单调栈&quot;&gt;&lt;a href=&quot;#单调栈&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
-    <category term="Xposed模块" scheme="https://longyu.cf/categories/xposed-module/"/>
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
     
     
-    <category term="Xposed模块" scheme="https://longyu.cf/tags/Xposed%E6%A8%A1%E5%9D%97/"/>
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="实用工具" scheme="https://longyu.cf/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-  </entry>
-  
-  <entry>
-    <title>VScode+PicGo搭建图床</title>
-    <link href="https://longyu.cf/vscode-enhance/VScode-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A.html"/>
-    <id>https://longyu.cf/vscode-enhance/VScode-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A.html</id>
-    <published>2021-07-22T12:46:05.000Z</published>
-    <updated>2021-07-23T07:51:01.463Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;1-下载PicGo插件&quot;&gt;&lt;a href=&quot;#1-下载PicGo插件&quot; class=&quot;headerlink&quot; title=&quot;1. 下载PicGo插件&quot;&gt;&lt;/a&gt;1. 下载PicGo插件&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&quot;https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20210722205519.png&quot; alt=&quot;20210722205519&quot;&gt;&lt;/p&gt;
-&lt;p&gt;先在扩展商店中下载PicGo插件（别告诉我你连VS code都没有）&lt;/p&gt;
-&lt;h1 id=&quot;2-选择搭建图床的网站&quot;&gt;&lt;a href=&quot;#2-选择搭建图床的网站&quot; class=&quot;headerlink&quot; title=&quot;2. 选择搭建图床的网站&quot;&gt;&lt;/a&gt;2. 选择搭建图床的网站&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;目前picgo只支持weibo, qiniu, tcyun, upyun, github, aliyun, imgur 和 smms这几种，不支持gitee&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;这里我选择用GitHub做演示&quot;&gt;&lt;a href=&quot;#这里我选择用GitHub做演示&quot; class=&quot;headerlink&quot; title=&quot;这里我选择用GitHub做演示&quot;&gt;&lt;/a&gt;这里我选择用GitHub做演示&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;如果你用其他的网站，方法也都是差不多的&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="VScode调教" scheme="https://longyu.cf/categories/vscode-enhance/"/>
-    
-    
-    <category term="VScode" scheme="https://longyu.cf/tags/VScode/"/>
-    
-    <category term="PicGo" scheme="https://longyu.cf/tags/PicGo/"/>
-    
-    <category term="图床" scheme="https://longyu.cf/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-    <category term="jsDelivr" scheme="https://longyu.cf/tags/jsDelivr/"/>
+    <category term="单调栈" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
     
   </entry>
   

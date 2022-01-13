@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://longyu.cf/algorithm-and-data-structure/STL.html</loc>
+    <lastmod>2022-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html</loc>
+    <lastmod>2022-01-13</lastmod>
+  </url>
+  <url>
     <loc>https://longyu.cf/algorithm-and-data-structure/%E5%A0%86.html</loc>
     <lastmod>2022-01-12</lastmod>
   </url>

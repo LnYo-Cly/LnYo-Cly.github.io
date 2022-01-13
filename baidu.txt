@@ -1,3 +1,5 @@
+https://longyu.cf/algorithm-and-data-structure/STL.html
+https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html
 https://longyu.cf/algorithm-and-data-structure/%E5%A0%86.html
 https://longyu.cf/algorithm-and-data-structure/%E5%B9%B6%E6%9F%A5%E9%9B%86.html
 https://longyu.cf/algorithm-and-data-structure/trie%E6%A0%91.html
@@ -6,5 +8,3 @@ https://longyu.cf/algorithm-and-data-structure/%7F%E6%A0%88%E5%92%8C%E9%98%9F%E5
 https://longyu.cf/algorithm-and-data-structure/%E9%93%BE%E8%A1%A8.html
 https://longyu.cf/algorithm-and-data-structure/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6.html
 https://longyu.cf/algorithm-and-data-structure/%E7%A6%BB%E6%95%A3%E5%8C%96.html
-https://longyu.cf/algorithm-and-data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97.html
-https://longyu.cf/algorithm-and-data-structure/%E5%8F%8C%E6%8C%87%E9%92%88.html
