@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2022-01-13T09:34:08.399Z</updated>
+  <updated>2022-01-15T12:06:38.635Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数和图的存储和遍历</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E6%95%B0%E5%92%8C%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E9%81%8D%E5%8E%86.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E6%95%B0%E5%92%8C%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E9%81%8D%E5%8E%86.html</id>
+    <published>2022-01-15T12:46:07.000Z</published>
+    <updated>2022-01-15T12:06:38.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;树&quot;&gt;&lt;a href=&quot;#树&quot; class=&quot;headerlink&quot; title=&quot;树&quot;&gt;&lt;/a&gt;树&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;是一种特殊的图&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="树" scheme="https://longyu.cf/tags/%E6%A0%91/"/>
+    
+    <category term="图" scheme="https://longyu.cf/tags/%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DFS深度优先搜索和BFS深度优先搜索</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/DFS%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%92%8CBFS%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/DFS%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%92%8CBFS%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2.html</id>
+    <published>2022-01-15T12:46:06.000Z</published>
+    <updated>2022-01-15T11:54:31.148Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;DFS深度优先搜索&quot;&gt;&lt;a href=&quot;#DFS深度优先搜索&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="DFS" scheme="https://longyu.cf/tags/DFS/"/>
+    
+    <category term="BFS" scheme="https://longyu.cf/tags/BFS/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>STL</title>
@@ -41,9 +110,9 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="STL" scheme="https://longyu.cf/tags/STL/"/>
-    
     <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="STL" scheme="https://longyu.cf/tags/STL/"/>
     
   </entry>
   
@@ -588,66 +657,6 @@
     <category term="priority_queue" scheme="https://longyu.cf/tags/priority-queue/"/>
     
     <category term="pair" scheme="https://longyu.cf/tags/pair/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单调队列的实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-09T13:44:10.277Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;单调队列&quot;&gt;&lt;a href=&quot;#单调队列&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="单调队列" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
-    
-    <category term="滑动窗口" scheme="https://longyu.cf/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单调栈的实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%95%E8%B0%83%E6%A0%88.html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-11T03:02:20.992Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;单调栈&quot;&gt;&lt;a href=&quot;#单调栈&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="单调栈" scheme="https://longyu.cf/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
     
   </entry>
   
