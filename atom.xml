@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2022-01-15T12:06:38.635Z</updated>
+  <updated>2022-01-16T09:39:44.681Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最短路问题</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E6%9C%80%E7%9F%AD%E8%B7%AF.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E6%9C%80%E7%9F%AD%E8%B7%AF.html</id>
+    <published>2022-01-16T12:46:06.000Z</published>
+    <updated>2022-01-16T09:39:44.681Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;单源（起点）最短路&quot;&gt;&lt;a href=&quot;#单源（起点）最短路&quot; class=&quot;headerlink&quot; title=&quot;单源（起点）最短路&quot;&gt;&lt;/a&gt;单源（起点）最短路&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;只有一个起点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="最短路" scheme="https://longyu.cf/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>数和图的存储和遍历</title>
@@ -121,7 +155,7 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/hash%E5%93%88%E5%B8%8C%E8%A1%A8.html</id>
     <published>2022-01-13T12:46:06.000Z</published>
-    <updated>2022-01-13T09:21:25.411Z</updated>
+    <updated>2022-01-21T12:40:19.631Z</updated>
     
     
       
@@ -252,14 +286,15 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html</id>
     <published>2022-01-11T12:46:08.000Z</published>
-    <updated>2022-01-11T13:36:37.131Z</updated>
+    <updated>2022-01-19T14:16:19.319Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;p&gt;next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -283,7 +318,7 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/%7F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%7F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</id>
     <published>2022-01-11T12:46:06.000Z</published>
-    <updated>2022-01-11T12:35:37.215Z</updated>
+    <updated>2022-01-19T06:15:36.491Z</updated>
     
     
       
@@ -351,7 +386,7 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6.html</id>
     <published>2022-01-10T12:46:08.000Z</published>
-    <updated>2022-01-10T11:52:21.529Z</updated>
+    <updated>2022-01-17T13:41:58.929Z</updated>
     
     
       
@@ -468,7 +503,7 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%E5%89%8D%E7%BC%80%E5%92%8C%E4%B8%8E%E5%B7%AE%E5%88%86.html</id>
     <published>2022-01-09T12:46:06.000Z</published>
-    <updated>2022-01-09T13:08:41.730Z</updated>
+    <updated>2022-01-17T09:07:10.858Z</updated>
     
     
       
@@ -500,7 +535,7 @@
     <link href="https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%E9%AB%98%E7%B2%BE%E5%BA%A6.html</id>
     <published>2022-01-09T12:46:05.000Z</published>
-    <updated>2022-01-09T10:47:06.614Z</updated>
+    <updated>2022-01-17T08:59:12.581Z</updated>
     
     
       
@@ -529,42 +564,11 @@
   </entry>
   
   <entry>
-    <title>归并排序算法</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html</id>
-    <published>2022-01-08T12:46:05.000Z</published>
-    <updated>2022-01-08T12:06:48.631Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
-    <category term="归并排序" scheme="https://longyu.cf/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>整数二分和小数二分</title>
     <link href="https://longyu.cf/algorithm-and-data-structure/%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86%E5%92%8C%E5%B0%8F%E6%95%B0%E4%BA%8C%E5%88%86.html"/>
     <id>https://longyu.cf/algorithm-and-data-structure/%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86%E5%92%8C%E5%B0%8F%E6%95%B0%E4%BA%8C%E5%88%86.html</id>
     <published>2022-01-08T12:46:05.000Z</published>
-    <updated>2022-01-08T12:19:57.792Z</updated>
+    <updated>2022-01-16T14:45:39.095Z</updated>
     
     
       
@@ -624,18 +628,18 @@
   </entry>
   
   <entry>
-    <title>优先队列（堆）的实现</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(%E5%A0%86).html</id>
-    <published>2021-08-03T12:46:05.000Z</published>
-    <updated>2021-08-09T13:12:59.905Z</updated>
+    <title>归并排序算法</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%BD%92%E5%B9%B6.html</id>
+    <published>2022-01-08T12:46:05.000Z</published>
+    <updated>2022-01-08T12:06:48.631Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;优先队列（堆）&quot;&gt;&lt;a href=&quot;#优先队列（堆）&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -648,15 +652,9 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="优先队列" scheme="https://longyu.cf/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
-    <category term="堆" scheme="https://longyu.cf/tags/%E5%A0%86/"/>
-    
-    <category term="map" scheme="https://longyu.cf/tags/map/"/>
-    
-    <category term="priority_queue" scheme="https://longyu.cf/tags/priority-queue/"/>
-    
-    <category term="pair" scheme="https://longyu.cf/tags/pair/"/>
+    <category term="归并排序" scheme="https://longyu.cf/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   

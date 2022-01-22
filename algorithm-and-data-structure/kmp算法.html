@@ -21,16 +21,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"longyu.cf","root":"/","images":"/images","scheme":"Pisces","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="12345678910111213141516171819202122&#x2F;&#x2F; s[]是长文本，p[]是模式串，n是s的长度，m是p的长度求模式串的Next数组：for (int i &#x3D; 2, j &#x3D; 0; i &lt;&#x3D; m; i ++ )&amp;#123;    while (j &amp;&amp; p[i] !&#x3D; p[j + 1]) j &#x3D; ne[j];    if (p[i] &#x3D;&#x3D; p[j + 1">
+<meta name="description" content="next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。 123456789101112131415161718192021222324252627282930&#x2F;&#x2F;读入数组cin&gt;&gt; p+1 &gt;&gt;s+1;&#x2F;&#x2F;从下标为1的位置开始存，0位置不存&#x2F;&#x2F; s[]是长文本，p[]是模式串，n是s的长度，m是p的长度求模式串的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kmp算法">
 <meta property="og:url" content="https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html">
 <meta property="og:site_name" content="没有秘密的秘密小屋">
-<meta property="og:description" content="12345678910111213141516171819202122&#x2F;&#x2F; s[]是长文本，p[]是模式串，n是s的长度，m是p的长度求模式串的Next数组：for (int i &#x3D; 2, j &#x3D; 0; i &lt;&#x3D; m; i ++ )&amp;#123;    while (j &amp;&amp; p[i] !&#x3D; p[j + 1]) j &#x3D; ne[j];    if (p[i] &#x3D;&#x3D; p[j + 1">
+<meta property="og:description" content="next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。 123456789101112131415161718192021222324252627282930&#x2F;&#x2F;读入数组cin&gt;&gt; p+1 &gt;&gt;s+1;&#x2F;&#x2F;从下标为1的位置开始存，0位置不存&#x2F;&#x2F; s[]是长文本，p[]是模式串，n是s的长度，m是p的长度求模式串的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111213633.png">
 <meta property="article:published_time" content="2022-01-11T12:46:08.000Z">
-<meta property="article:modified_time" content="2022-01-11T13:36:37.131Z">
+<meta property="article:modified_time" content="2022-01-19T14:16:19.319Z">
 <meta property="article:author" content="璀璨cly">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="数据结构">
@@ -98,9 +98,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">43</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">44</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">24</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">25</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -174,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -187,7 +187,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">44</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -271,10 +271,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-01-11 20:46:08 / 修改时间：21:36:37" itemprop="dateCreated datePublished" datetime="2022-01-11T20:46:08+08:00">2022-01-11</time>
+      <time title="创建时间：2022-01-11 20:46:08" itemprop="dateCreated datePublished" datetime="2022-01-11T20:46:08+08:00">2022-01-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-01-19 22:16:19" itemprop="dateModified" datetime="2022-01-19T22:16:19+08:00">2022-01-19</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -300,7 +306,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>322</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -318,9 +324,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// s[]是长文本，p[]是模式串，n是s的长度，m是p的长度</span></span><br><span class="line">求模式串的Next数组：</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    ne[i] = j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    <span class="keyword">if</span> (j == m)</span><br><span class="line">    &#123;</span><br><span class="line">        j = ne[j];</span><br><span class="line">        <span class="comment">// 匹配成功后的逻辑</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p>next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读入数组</span></span><br><span class="line">cin&gt;&gt; p+<span class="number">1</span> &gt;&gt;s+<span class="number">1</span>;</span><br><span class="line"><span class="comment">//从下标为1的位置开始存，0位置不存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// s[]是长文本，p[]是模式串，n是s的长度，m是p的长度</span></span><br><span class="line">求模式串的Next数组：</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    ne[i] = j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    <span class="keyword">if</span> (j == m)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 匹配成功，做一些事</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//继续匹配</span></span><br><span class="line">        j = ne[j];</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111213633.png" alt="20220111213633"></p>
+<p>例题：</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3375">P3375 KMP字符串匹配</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">char</span> s[N],p[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ne[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s%s&quot;</span>, s+<span class="number">1</span>,p+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> m=<span class="built_in">strlen</span>(p+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(j &amp;&amp; p[i]!=p[j+<span class="number">1</span>]) j=ne[j];</span><br><span class="line">        <span class="keyword">if</span>(p[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        ne[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(j &amp;&amp; s[i]!=p[j+<span class="number">1</span>]) j=ne[j];</span><br><span class="line">        <span class="keyword">if</span>(s[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        <span class="keyword">if</span>(j==m)<span class="comment">//匹配成功</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//输出起始位置，i是末尾位置，i-m+1是起始位置</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,i-m+<span class="number">1</span>);</span><br><span class="line">            </span><br><span class="line">            j=ne[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出next数组（从1开始）</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,ne[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -453,14 +463,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">41k</span>
+    <span title="站点总字数">48k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">37 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
