@@ -91,9 +91,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">44</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">25</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">27</span></a></li>
         <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -167,7 +167,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,7 +180,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -228,6 +228,214 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E4%BA%8C%E5%88%86%E5%9B%BE.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
+      <meta itemprop="name" content="璀璨cly">
+      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没有秘密的秘密小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm-and-data-structure/%E4%BA%8C%E5%88%86%E5%9B%BE.html" class="post-title-link" itemprop="url">二分图</a>
+        </h2>
+
+        <div class="post-meta-container">
+
+
+          <div class="post-meta">
+
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-01-25 20:46:07 / 修改时间：15:21:19" itemprop="dateCreated datePublished" datetime="2022-01-25T20:46:07+08:00">2022-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="二分图"><a href="#二分图" class="headerlink" title="二分图"></a>二分图</h1><p>一个图是二分图 当且仅当图中不含奇数环</p>
+<h2 id="染色法"><a href="#染色法" class="headerlink" title="染色法"></a>染色法</h2><blockquote>
+<p>o(m+n)<br>判断二分图</p>
+</blockquote>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220125150653.png" alt="代码流程"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;      <span class="comment">// n表示点数</span></span><br><span class="line"><span class="keyword">int</span> h[N], e[M], ne[M], idx;     <span class="comment">// 邻接表存储图</span></span><br><span class="line"><span class="keyword">int</span> color[N];       <span class="comment">// 表示每个点的颜色，-1表示未染色，0表示白色，1表示黑色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 参数：u表示当前节点，c表示当前点的颜色</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    color[u] = c;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = h[u]; i != <span class="number">-1</span>; i = ne[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = e[i];</span><br><span class="line">        <span class="keyword">if</span> (color[j] == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="built_in">dfs</span>(j, !c)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (color[j] == c) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(color, <span class="number">-1</span>, <span class="keyword">sizeof</span> color);</span><br><span class="line">    <span class="keyword">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">        <span class="keyword">if</span> (color[i] == <span class="number">-1</span>)</span><br><span class="line">            <span class="keyword">if</span> (!<span class="built_in">dfs</span>(i, <span class="number">0</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="keyword">return</span> flag;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><blockquote>
+<p>最坏o(mn)<br>最大匹配</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n1, n2;     <span class="comment">// n1表示第一个集合中的点数，n2表示第二个集合中的点数</span></span><br><span class="line"><span class="keyword">int</span> h[N], e[M], ne[M], idx;     <span class="comment">// 邻接表存储所有边，匈牙利算法中只会用到从第一个集合指向第二个集合的边，所以这里只用存一个方向的边</span></span><br><span class="line"><span class="keyword">int</span> match[N];       <span class="comment">// 存储第二个集合中的每个点当前匹配的第一个集合中的点是哪个</span></span><br><span class="line"><span class="keyword">bool</span> st[N];     <span class="comment">// 表示第二个集合中的每个点是否已经被遍历过</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = h[x]; i != <span class="number">-1</span>; i = ne[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = e[i];</span><br><span class="line">        <span class="keyword">if</span> (!st[j])</span><br><span class="line">        &#123;</span><br><span class="line">            st[j] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span> (match[j] == <span class="number">0</span> || <span class="built_in">find</span>(match[j]))</span><br><span class="line">            &#123;</span><br><span class="line">                match[j] = x;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 求最大匹配数，依次枚举第一个集合中的每个点能否匹配第二个集合中的点</span></span><br><span class="line"><span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n1; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">memset</span>(st, <span class="literal">false</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">find</span>(i)) res ++ ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
+      <meta itemprop="name" content="璀璨cly">
+      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没有秘密的秘密小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm-and-data-structure/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91.html" class="post-title-link" itemprop="url">最小生成树</a>
+        </h2>
+
+        <div class="post-meta-container">
+
+
+          <div class="post-meta">
+
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-01-25 20:46:06 / 修改时间：14:37:22" itemprop="dateCreated datePublished" datetime="2022-01-25T20:46:06+08:00">2022-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><h2 id="prim算法-稠密图"><a href="#prim算法-稠密图" class="headerlink" title="prim算法 (稠密图)"></a>prim算法 (稠密图)</h2><h3 id="朴素版prim算法-（常用）"><a href="#朴素版prim算法-（常用）" class="headerlink" title="朴素版prim算法 （常用）"></a>朴素版prim算法 （常用）</h3><blockquote>
+<p>代码短<br>稠密图<br>经常用<br>o(n^2)<br><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220125140433.png" alt="算法流程"></p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;      <span class="comment">// n表示点数</span></span><br><span class="line"><span class="keyword">int</span> g[N][N];        <span class="comment">// 邻接矩阵，存储所有边</span></span><br><span class="line"><span class="keyword">int</span> dist[N];        <span class="comment">// 存储其他点到当前最小生成树的距离</span></span><br><span class="line"><span class="keyword">bool</span> st[N];     <span class="comment">// 存储每个点是否已经在生成树中</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果图不连通，则返回INF(值是0x3f3f3f3f), 否则返回最小生成树的树边权重之和</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prim</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j ++ )</span><br><span class="line">            <span class="keyword">if</span> (!st[j] &amp;&amp; (t == <span class="number">-1</span> || dist[t] &gt; dist[j]))</span><br><span class="line">                t = j;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (i &amp;&amp; dist[t] == INF) <span class="keyword">return</span> INF;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (i) res += dist[t];</span><br><span class="line">        st[t] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j ++ ) dist[j] = <span class="built_in">min</span>(dist[j], g[t][j]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="堆优化版prim算法-（不常用）"><a href="#堆优化版prim算法-（不常用）" class="headerlink" title="堆优化版prim算法 （不常用）"></a>堆优化版prim算法 （不常用）</h3><blockquote>
+<p>不经常用<br>o(mlogn)</p>
+</blockquote>
+<h2 id="克鲁斯卡尔-kruskal-算法-稀疏图"><a href="#克鲁斯卡尔-kruskal-算法-稀疏图" class="headerlink" title="克鲁斯卡尔(kruskal)算法 (稀疏图)"></a>克鲁斯卡尔(kruskal)算法 (稀疏图)</h2><blockquote>
+<p>o(mlogm)</p>
+</blockquote>
+<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220125143659.png" alt="算法流程"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;       <span class="comment">// n是点数，m是边数</span></span><br><span class="line"><span class="keyword">int</span> p[N];       <span class="comment">// 并查集的父节点数组</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>     // 存储边</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a, b, w;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt; (<span class="keyword">const</span> Edge &amp;W)<span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> w &lt; W.w;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;edges[M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>     <span class="comment">// 并查集核心操作</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p[x] != x) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">    <span class="keyword">return</span> p[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kruskal</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">sort</span>(edges, edges + m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ ) p[i] = i;    <span class="comment">// 初始化并查集</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a = edges[i].a, b = edges[i].b, w = edges[i].w;</span><br><span class="line"></span><br><span class="line">        a = <span class="built_in">find</span>(a), b = <span class="built_in">find</span>(b);</span><br><span class="line">        <span class="keyword">if</span> (a != b)     <span class="comment">// 如果两个连通块不连通，则将这两个连通块合并</span></span><br><span class="line">        &#123;</span><br><span class="line">            p[a] = b;</span><br><span class="line">            res += w;</span><br><span class="line">            cnt ++ ;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (cnt &lt; n - <span class="number">1</span>) <span class="keyword">return</span> INF;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1236,225 +1444,6 @@ flip() 把第K位取反
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
-      <meta itemprop="name" content="璀璨cly">
-      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="没有秘密的秘密小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html" class="post-title-link" itemprop="url">kmp算法</a>
-        </h2>
-
-        <div class="post-meta-container">
-
-
-          <div class="post-meta">
-
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-01-11 20:46:08" itemprop="dateCreated datePublished" datetime="2022-01-11T20:46:08+08:00">2022-01-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-19 22:16:19" itemprop="dateModified" datetime="2022-01-19T22:16:19+08:00">2022-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读入数组</span></span><br><span class="line">cin&gt;&gt; p+<span class="number">1</span> &gt;&gt;s+<span class="number">1</span>;</span><br><span class="line"><span class="comment">//从下标为1的位置开始存，0位置不存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// s[]是长文本，p[]是模式串，n是s的长度，m是p的长度</span></span><br><span class="line">求模式串的Next数组：</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    ne[i] = j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    <span class="keyword">if</span> (j == m)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 匹配成功，做一些事</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//继续匹配</span></span><br><span class="line">        j = ne[j];</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111213633.png" alt="20220111213633"></p>
-<p>例题：</p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3375">P3375 KMP字符串匹配</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">char</span> s[N],p[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ne[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s%s&quot;</span>, s+<span class="number">1</span>,p+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> m=<span class="built_in">strlen</span>(p+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(j &amp;&amp; p[i]!=p[j+<span class="number">1</span>]) j=ne[j];</span><br><span class="line">        <span class="keyword">if</span>(p[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        ne[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(j &amp;&amp; s[i]!=p[j+<span class="number">1</span>]) j=ne[j];</span><br><span class="line">        <span class="keyword">if</span>(s[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        <span class="keyword">if</span>(j==m)<span class="comment">//匹配成功</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//输出起始位置，i是末尾位置，i-m+1是起始位置</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,i-m+<span class="number">1</span>);</span><br><span class="line">            </span><br><span class="line">            j=ne[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//输出next数组（从1开始）</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,ne[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://longyu.cf/algorithm-and-data-structure/%7F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88.jpg">
-      <meta itemprop="name" content="璀璨cly">
-      <meta itemprop="description" content="闲来无事分享生活碎碎小事，有事没事在上面记录。目标做一个全能的UP">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="没有秘密的秘密小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/algorithm-and-data-structure/%7F%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html" class="post-title-link" itemprop="url">栈和队列</a>
-        </h2>
-
-        <div class="post-meta-container">
-
-
-          <div class="post-meta">
-
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-01-11 20:46:06" itemprop="dateCreated datePublished" datetime="2022-01-11T20:46:06+08:00">2022-01-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-19 14:15:36" itemprop="dateModified" datetime="2022-01-19T14:15:36+08:00">2022-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/algorithm-and-data-structure/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><blockquote>
-<p>先进后出</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tt表示栈顶</span></span><br><span class="line"><span class="keyword">int</span> stk[N], tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向栈顶插入一个数</span></span><br><span class="line">stk[ ++ tt] = x;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从栈顶弹出一个数</span></span><br><span class="line">tt -- ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 栈顶的值</span></span><br><span class="line">stk[tt];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断栈是否为空</span></span><br><span class="line"><span class="keyword">if</span> (tt &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// 不空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><h2 id="普通队列"><a href="#普通队列" class="headerlink" title="普通队列"></a>普通队列</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hh 表示队头，tt表示队尾</span></span><br><span class="line"><span class="keyword">int</span> q[N], hh = <span class="number">0</span>, tt = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向队尾插入一个数</span></span><br><span class="line">q[ ++ tt] = x;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从队头弹出一个数</span></span><br><span class="line">hh ++ ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 队头的值</span></span><br><span class="line">q[hh];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断队列是否为空</span></span><br><span class="line"><span class="keyword">if</span> (hh &lt;= tt)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//不为空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hh 表示队头，tt表示队尾的后一个位置</span></span><br><span class="line"><span class="keyword">int</span> q[N], hh = <span class="number">0</span>, tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向队尾插入一个数</span></span><br><span class="line">q[tt ++ ] = x;</span><br><span class="line"><span class="keyword">if</span> (tt == N) tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从队头弹出一个数</span></span><br><span class="line">hh ++ ;</span><br><span class="line"><span class="keyword">if</span> (hh == N) hh = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 队头的值</span></span><br><span class="line">q[hh];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断队列是否为空</span></span><br><span class="line"><span class="keyword">if</span> (hh != tt)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h1><p>返回一个数左边且比他小的数，没有返回-1<br><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111181656.png" alt="20220111181656"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">常见模型：找出每个数左边离它最近的比它大/小的数</span><br><span class="line"><span class="keyword">int</span> tt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//看是更大（从栈里面找，也就是栈顶 &gt; x ==》输出，&lt;=x 弹出栈）还是更小，</span></span><br><span class="line">    <span class="keyword">while</span> (tt &amp;&amp; <span class="built_in">check</span>(stk[tt], i)) tt -- ;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    <span class="keyword">if</span>(tt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//可以不存结果，直接输出</span></span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    stk[ ++ tt] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">常见模型：找出每个数右边边离它最近的比它大/小的数</span><br><span class="line"><span class="keyword">int</span> tt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i -- )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//看是更大（从栈里面找，也就是栈顶 &gt; x ==》输出，&lt;=x 弹出栈）还是更小，</span></span><br><span class="line">    <span class="keyword">while</span> (tt &amp;&amp; <span class="built_in">check</span>(stk[tt], i)) tt -- ;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    <span class="keyword">if</span>(tt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//存入结果</span></span><br><span class="line">    ans[i]=stk[tt]</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    stk[ ++ tt] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111184157.png" alt="20220111184157"></p>
-<h1 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">常见模型：找出滑动窗口中的最大值/最小值</span><br><span class="line"><span class="keyword">int</span> hh = <span class="number">0</span>, tt = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; <span class="built_in">check_out</span>(q[hh])) hh ++ ;  <span class="comment">// 判断队头是否滑出窗口，可以写if</span></span><br><span class="line">    <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; <span class="built_in">check</span>(q[tt], i)) tt -- ;</span><br><span class="line">    q[ ++ tt] = i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220111203319.png" alt="20220111203319"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1480,14 +1469,14 @@ flip() 把第K位取反
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">51k</span>
+    <span title="站点总字数">53k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">46 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
