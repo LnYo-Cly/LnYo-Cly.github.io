@@ -6,7 +6,7 @@
   <link href="https://longyu.cf/atom.xml" rel="self"/>
   
   <link href="https://longyu.cf/"/>
-  <updated>2022-01-30T09:16:19.108Z</updated>
+  <updated>2022-02-04T07:37:26.581Z</updated>
   <id>https://longyu.cf/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DP</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/DP.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/DP.html</id>
+    <published>2022-02-01T12:46:08.000Z</published>
+    <updated>2022-02-04T07:37:26.581Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背包问题&quot;&gt;&lt;a href=&quot;#背包问题&quot; class=&quot;headerlink&quot; title=&quot;背包问题&quot;&gt;&lt;/a&gt;背包问题&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;有N个物品 和 容量为的背包&lt;br&gt;每个物品有两个属性</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="DP" scheme="https://longyu.cf/tags/DP/"/>
+    
+  </entry>
   
   <entry>
     <title>组合数</title>
@@ -101,6 +133,68 @@
     <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
     <category term="中国剩余定理" scheme="https://longyu.cf/tags/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博弈论</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%8D%9A%E5%BC%88%E8%AE%BA.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%8D%9A%E5%BC%88%E8%AE%BA.html</id>
+    <published>2022-01-29T12:46:08.000Z</published>
+    <updated>2022-01-31T14:38:56.170Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;NIM游戏-——-模板题-AcWing-891-Nim游戏&quot;&gt;&lt;a href=&quot;#NIM游戏-——-模板题-AcWing-891-Nim游戏&quot; class=&quot;headerlink&quot; title=&quot;NIM游戏 —— 模板题 AcWing 891.</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="博弈论" scheme="https://longyu.cf/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>容斥原理</title>
+    <link href="https://longyu.cf/algorithm-and-data-structure/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.html"/>
+    <id>https://longyu.cf/algorithm-and-data-structure/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.html</id>
+    <published>2022-01-29T12:46:08.000Z</published>
+    <updated>2022-01-31T13:21:45.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;容斥原理&quot;&gt;&lt;a href=&quot;#容斥原理&quot; class=&quot;headerlink&quot; title=&quot;容斥原理&quot;&gt;&lt;/a&gt;容斥原理&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
+    
+    
+    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="容斥原理" scheme="https://longyu.cf/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -560,106 +654,6 @@
     <category term="trie树" scheme="https://longyu.cf/tags/trie%E6%A0%91/"/>
     
     <category term="前缀树" scheme="https://longyu.cf/tags/%E5%89%8D%E7%BC%80%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kmp算法</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/kmp%E7%AE%97%E6%B3%95.html</id>
-    <published>2022-01-11T12:46:08.000Z</published>
-    <updated>2022-01-19T14:16:19.319Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;next数组存的不是这个位置的 最长的相同的真前后缀长度，它存的是这个位置前面的字符串的 最长的相同的真前后缀长度。&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
-    <category term="kmp" scheme="https://longyu.cf/tags/kmp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>栈和队列</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</id>
-    <published>2022-01-11T12:46:06.000Z</published>
-    <updated>2022-01-19T06:15:36.491Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot; title=&quot;栈&quot;&gt;&lt;/a&gt;栈&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;先进后出&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
-    <category term="栈" scheme="https://longyu.cf/tags/%E6%A0%88/"/>
-    
-    <category term="队列" scheme="https://longyu.cf/tags/%E9%98%9F%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>链表</title>
-    <link href="https://longyu.cf/algorithm-and-data-structure/%E9%93%BE%E8%A1%A8.html"/>
-    <id>https://longyu.cf/algorithm-and-data-structure/%E9%93%BE%E8%A1%A8.html</id>
-    <published>2022-01-11T12:46:05.000Z</published>
-    <updated>2022-01-11T09:53:52.933Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;单链表-数组实现&quot;&gt;&lt;a href=&quot;#单链表-数组实现&quot; class=&quot;headerlink&quot; title=&quot;单链表(数组实现)&quot;&gt;&lt;/a&gt;单链表(数组实现)&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;邻接表</summary>
-        
-      
-    
-    
-    
-    <category term="算法与数据结构" scheme="https://longyu.cf/categories/algorithm-and-data-structure/"/>
-    
-    
-    <category term="算法" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
-    <category term="链表" scheme="https://longyu.cf/tags/%E9%93%BE%E8%A1%A8/"/>
     
   </entry>
   

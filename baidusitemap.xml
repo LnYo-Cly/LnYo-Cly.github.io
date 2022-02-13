@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://longyu.cf/algorithm-and-data-structure/DP.html</loc>
+    <lastmod>2022-02-04</lastmod>
+  </url>
+  <url>
+    <loc>https://longyu.cf/algorithm-and-data-structure/%E5%8D%9A%E5%BC%88%E8%AE%BA.html</loc>
+    <lastmod>2022-01-31</lastmod>
+  </url>
+  <url>
+    <loc>https://longyu.cf/algorithm-and-data-structure/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.html</loc>
+    <lastmod>2022-01-31</lastmod>
+  </url>
+  <url>
     <loc>https://longyu.cf/algorithm-and-data-structure/%E7%BB%84%E5%90%88%E6%95%B0.html</loc>
     <lastmod>2022-01-30</lastmod>
   </url>
