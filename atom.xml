@@ -42,9 +42,9 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    
     <category term="DP" scheme="https://longyu.cf/tags/DP/"/>
+    
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
@@ -487,11 +487,11 @@
     
     <category term="数据结构" scheme="https://longyu.cf/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
+    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
     <category term="DFS" scheme="https://longyu.cf/tags/DFS/"/>
     
     <category term="BFS" scheme="https://longyu.cf/tags/BFS/"/>
-    
-    <category term="算法模板" scheme="https://longyu.cf/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
