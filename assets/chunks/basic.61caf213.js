@@ -1,1 +1,0 @@
-import{_ as o,E as t,o as c,b as a,w as n,a as r}from"./framework.dd29f695.js";const s={};function _(l,u){const e=t("elu-button");return c(),a(e,{style:{color:"aqua","background-color":"aliceblue"}},{default:n(()=>[r("按钮")]),_:1})}const b=o(s,[["render",_]]);export{b as default};
